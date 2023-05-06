@@ -1,0 +1,10 @@
+name: rtraining
+channels:
+  - conda-forge
+  - r
+dependencies:
+  - python=3.8
+  - jupyter-book
+  - r-base
+  - r-tidyverse
+  - r-irkernel
