@@ -1,2 +1,2 @@
 # RTraining
-Übungsaufgaben für RLernplattform
+Übungsaufgaben der [RLernplattform](https://github.com/Methods-Berlin/RLernplattform).
