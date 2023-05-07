@@ -21,7 +21,6 @@ Im Folgenden wollen wir uns mit Funktionen in R beschäftigen. Wir gucken uns an
 Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen. 
 
 ```{code-cell} r 
-
 neue_funktion <- function(x,y){
     x+y}
 
