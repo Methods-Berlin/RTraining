@@ -18,6 +18,10 @@ Im Folgenden wollen wir uns mit Funktionen in R beschäftigen. Wir gucken uns an
 
 > Funktionen sind (Unter-)Programme, die eine gewisse Funktionalität haben, d.h. eine bestimmte Aufgabe ausführen.
 
+<aside>
+  test
+</aside>
+
 Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen. 
 
 ```{code-cell} r 
