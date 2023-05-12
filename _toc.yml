@@ -6,3 +6,4 @@ root: intro
 chapters:
 - file: markdown-notebooks
 - file: aufgabe_test
+- file: test
