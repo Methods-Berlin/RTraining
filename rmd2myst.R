@@ -4,11 +4,11 @@
 #' rmd2myst
 #' @param file_name Name der Rmd Datei. Diese muss sich im aktuellen working directory befinden
 #' @param myst_yaml optional: YAML header für die myst - Datei
-#' @return erstellt eine .md Datei im myst - Syle
+#' @return erstellt eine .md Datei im myst - Style
 rmd2myst <- function(file_name, myst_yaml = NULL) {
   # Einlesen der Rmd Datei
-  save_as <- gsub("\\.Rmd", ".md", x)
-  dat <- file(x)
+  save_as <- gsub("\\.Rmd", ".md", file_name)
+  dat <- file(file_name)
   x <- readLines(dat)
   close(dat)
   
@@ -63,6 +63,5 @@ kernelspec:
 }
 
 
-
-rmd2myst("Aufgaben_rmd/test.Rmd")
+rmd2myst("Aufgaben_rmd/test_2.Rmd")
 
