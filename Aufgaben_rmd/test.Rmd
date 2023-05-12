@@ -33,6 +33,6 @@ plot(pressure)
 plot(pressure)
 ```
 
-```{r, test}
+```{r test}
 plot(pressure)
 ```

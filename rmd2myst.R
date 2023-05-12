@@ -62,6 +62,7 @@ kernelspec:
   cat(x, file = save_as, sep = "\n")
 }
 
+dat_namen <- list.files("Aufgaben_rmd",full.names=T)
+lapply(dat_namen,rmd2myst)
 
-rmd2myst("Aufgaben_rmd/test_2.Rmd")
 
