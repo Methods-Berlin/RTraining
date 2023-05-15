@@ -19,8 +19,27 @@ Im Folgenden wollen wir uns mit Funktionen in R beschäftigen. Wir gucken uns an
 > Funktionen sind (Unter-)Programme, die eine gewisse Funktionalität haben, d.h. eine bestimmte Aufgabe ausführen.
 
 <aside>
-  test
+  testing aside
 </aside>
+
+
+<details>
+    <summary>Testing Details</summary>
+    Some details details
+</details>
+
+```{dropdown} Testing Dropdown
+Some dropdown details
+```
+
+```{dropdown} Testing Dropdown with code
+```{code-cell} r 
+neue_funktion <- function(x,y){
+    x+y}
+
+neue_funktion(2,3)
+```
+```
 
 Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen. 
 
@@ -33,7 +52,7 @@ neue_funktion(2,3)
 
 Jetzt wollen wir eine Funktionen schreiben, die Fahrenheit in Celsius umrechnet.
 
-```{code-cell} r interactive
+```{code-cell} r
 f_to_c <- 
 ```
 
