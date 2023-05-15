@@ -28,28 +28,18 @@ Im Folgenden wollen wir uns mit Funktionen in R beschäftigen. Wir gucken uns an
     Some details details
 </details>
 
-<details>
-    <summary>Testing Details with code</summary>
-```{code-cell} r 
-neue_funktion <- function(x,y){
-    x+y}
-
-neue_funktion(2,3)
-```
-</details>
-
 ```{dropdown} Testing Dropdown
 Some dropdown details
 ```
 
-```{dropdown} Testing Dropdown with code
-```{code-cell} r 
+````{dropdown} Testing Dropdown with code
+```{code-cell} r
 neue_funktion <- function(x,y){
     x+y}
 
 neue_funktion(2,3)
 ```
-```
+````
 
 Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen. 
 
@@ -62,7 +52,16 @@ neue_funktion(2,3)
 
 Jetzt wollen wir eine Funktionen schreiben, die Fahrenheit in Celsius umrechnet.
 
-```{code-cell} r
+`````{tab-set}
+````{tab-item}
+```{code-cell} Übung
 f_to_c <- 
 ```
+````
 
+````{tab-item}
+```{code-cell} Lösung
+f_to_c <- my_function(){}
+```
+````
+`````
