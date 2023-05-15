@@ -28,6 +28,16 @@ Im Folgenden wollen wir uns mit Funktionen in R beschäftigen. Wir gucken uns an
     Some details details
 </details>
 
+<details>
+    <summary>Testing Details with code</summary>
+```{code-cell} r 
+neue_funktion <- function(x,y){
+    x+y}
+
+neue_funktion(2,3)
+```
+</details>
+
 ```{dropdown} Testing Dropdown
 Some dropdown details
 ```
