@@ -43,7 +43,7 @@ neue_funktion(2,3)
 
 Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen. 
 
-```{code-cell} r 
+```{code-block} r 
 neue_funktion <- function(x,y){
     x+y}
 
@@ -54,13 +54,13 @@ Jetzt wollen wir eine Funktionen schreiben, die Fahrenheit in Celsius umrechnet.
 
 `````{tab-set}
 ````{tab-item}
-```{code-cell} Übung
+```{code-block} Übung
 f_to_c <- 
 ```
 ````
 
 ````{tab-item}
-```{code-cell} Lösung
+```{code-block} Lösung
 f_to_c <- my_function(){}
 ```
 ````
