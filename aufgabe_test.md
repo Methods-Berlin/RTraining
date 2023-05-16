@@ -41,7 +41,7 @@ neue_funktion(2,3)
 ```
 ````
 
-Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen. 
+Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen........
 
 ```{code-block} r 
 neue_funktion <- function(x,y){
