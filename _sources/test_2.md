@@ -29,17 +29,17 @@ Gleichung: $e^{i\pi} = -1$
 3. ghi
 
 
-````{code-cell} r
+```{code-cell} r
 dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
 plot(dat)
 ```
 
-````{code-cell} r
+```{code-cell} r
 2+4
 ```
 
 
-````{code-cell} r
+```{code-cell} r
 data <- cars[1:4, ]
 knitr::kable(data, caption = "Tabelle")
 ```
