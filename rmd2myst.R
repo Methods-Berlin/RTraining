@@ -138,7 +138,7 @@ replace_code <- function(x){
       
       # replace code start and add tags:
       x[i] <- paste0(
-        c("````{code-cell} r",
+        c("```{code-cell} r",
           tags_myst)
         , 
         collapse = "\n")
