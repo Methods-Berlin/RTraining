@@ -60,6 +60,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'aufgabe_test';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -433,15 +435,25 @@ Testing Dropdown<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Some dropdown details</p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Testing Dropdown with code<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+</details><div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">neue_funktion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">){</span>
+<span class="w">    </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">}</span>
+
+<span class="nf">neue_funktion</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
 </div>
-</details><p>Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen:</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">5</div></div>
+</details>
+</div>
+<p>Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen:</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">neue_funktion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">){</span>
 <span class="w">    </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">}</span>
 
@@ -449,7 +461,8 @@ Testing Dropdown with code<div class="sd-summary-down docutils">
 </pre></div>
 </div>
 <p>Jetzt wollen wir eine Funktionen schreiben, die Fahrenheit in Celsius umrechnet.</p>
-<div class="sd-tab-set docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">f_to_c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
+</pre></div>
 </div>
 </section>
 
