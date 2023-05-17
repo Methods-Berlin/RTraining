@@ -156,8 +156,8 @@ rmd2myst <- function(file_name,
                      target_folder,
                      myst_yaml = NULL) {
   # Einlesen der Rmd Datei
-  save_as <- paste0(target_folder, "\\", gsub("\\.Rmd", ".md", file_name))
-  dat <- file(paste0(source_folder, "\\", file_name))
+  save_as <- paste0(target_folder, "/", gsub("\\.Rmd", ".md", file_name))
+  dat <- file(paste0(source_folder, "/", file_name))
   x <- readLines(dat) # jede Zeile im Dokument wird zu einem Element im Vektor
   close(dat)
   
