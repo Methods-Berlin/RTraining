@@ -18,16 +18,6 @@ Im Folgenden wollen wir uns mit Funktionen in R beschäftigen. Wir gucken uns an
 
 > Funktionen sind (Unter-)Programme, die eine gewisse Funktionalität haben, d.h. eine bestimmte Aufgabe ausführen.
 
-<aside>
-  testing aside
-</aside>
-
-
-<details>
-    <summary>Testing Details</summary>
-    Some details details
-</details>
-
 ```{dropdown} Testing Dropdown
 Some dropdown details
 ```
@@ -41,7 +31,7 @@ neue_funktion(2,3)
 ```
 ````
 
-Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen........
+Wir können aber auch selbst Funktionen schreiben, um Abläufe zu automatisieren, die wir oft benutzen:
 
 ```{code-block} r 
 neue_funktion <- function(x,y){
