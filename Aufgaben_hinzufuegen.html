@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>R Markdown &#8212; RTraining</title>
+    <title>Aufgaben hinzufügen &#8212; RTraining</title>
   
   
   
@@ -60,11 +60,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'test';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Aufgaben_hinzufuegen';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="R Markdown" href="test_1.html" />
-    <link rel="prev" title="Funktionen in R" href="aufgabe_test.html" />
+    <link rel="prev" title="Überschrift" href="test_3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -158,12 +157,12 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Aufgabe 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aufgabe_test.html">Funktionen in R</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">R Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">R Markdown</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="test_1.html">R Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test_2.html">Überschrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test_3.html">Überschrift</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Aufgaben_hinzufuegen.html">Aufgaben hinzufügen</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aufgaben hinzufügen</a></li>
 
 
 </ul>
@@ -220,7 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/Methods-Berlin/RTraining/main?urlpath=tree/test.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/Methods-Berlin/RTraining/main?urlpath=tree/Aufgaben_hinzufuegen.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Methods-Berlin/RTraining/issues/new?title=Issue%20on%20page%20%2Ftest.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Methods-Berlin/RTraining/issues/new?title=Issue%20on%20page%20%2FAufgaben_hinzufuegen.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +315,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/test.ipynb" target="_blank"
+      <li><a href="_sources/Aufgaben_hinzufuegen.ipynb" target="_blank"
    class="btn btn-sm btn-download-notebook-button dropdown-item"
    title="Download notebook file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -333,7 +332,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/test.md" target="_blank"
+      <li><a href="_sources/Aufgaben_hinzufuegen.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -415,7 +414,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>R Markdown</h1>
+    <h1>Aufgaben hinzufügen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -425,8 +424,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">R Markdown</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#including-plots">Including Plots</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aufgaben hinzufügen</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocke">Code-Blöcke</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a></li>
 </ul>
 
             </nav>
@@ -439,43 +439,78 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="r-markdown">
-<h1>R Markdown<a class="headerlink" href="#r-markdown" title="Permalink to this headline">#</a></h1>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a class="reference external" href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+  <section id="aufgaben-hinzufugen">
+<h1>Aufgaben hinzufügen<a class="headerlink" href="#aufgaben-hinzufugen" title="Permalink to this headline">#</a></h1>
+<p>Aufgaben der RTraining-Plattform sind in RMarkdown geschrieben und werden
+automatisch vom Skript <a class="reference external" href="https://github.com/Methods-Berlin/RTraining/blob/main/rmd2myst.R">rmd2myst.R</a>
+in myst-Markdown übersetzt. myst-Markdown ist die von JupyterBook unterstützte
+Markdown Version. Neue Aufgaben werden hinzugefügt, indem diese als Rmd-Dateien
+im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei
+(z.B. bei “neue_Aufgabe.Rmd” ist der Name “neue_Aufgabe”) im Dokument _toc.yml
+hinzugefügt werden.</p>
+<p>Die automatische Übersetzung unterstützt zur Zeit leider nicht alle Funktionen
+von RMarkdown. Das betrifft insbesondere die tags, die in R Code-Blöcken genutzt
+werden können (z.B. <code class="docutils literal notranslate"><span class="pre">eval</span> <span class="pre">=</span> <span class="pre">FALSE</span></code>). Außerdem können nicht alle html-tags (z.B.
+<code class="docutils literal notranslate"><span class="pre">aside</span></code> oder <code class="docutils literal notranslate"><span class="pre">details</span></code>) vollumfänglich genutzt werden.</p>
+<p>Im Folgenden werden die unterstützten Optionen demonstriert. Der Quelltext
+ist in <a class="reference external" href="https://github.com/Methods-Berlin/RTraining/tree/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd">GitHub</a>
+hinterlegt.</p>
+</section>
+<section id="code-blocke">
+<h1>Code-Blöcke<a class="headerlink" href="#code-blocke" title="Permalink to this headline">#</a></h1>
+<p>Die folgenden Code-Blöcke werden unterstützt:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># einfacher code-Block</span>
+<span class="nf">print</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] 3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] 3
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="including-plots">
-<h1>Including Plots<a class="headerlink" href="#including-plots" title="Permalink to this headline">#</a></h1>
-<p>You can also embed plots, for example:</p>
-<div class="cell docutils container">
+<section id="details">
+<h1>Details<a class="headerlink" href="#details" title="Permalink to this headline">#</a></h1>
+<details>
+Details mit Text
+</details><div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">pressure</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># details mit code-Block</span>
+<span class="nf">print</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/acf3881ac4826fc1ac88444101d2d62c831b99d967cb412e96d7006166fa66ec.png" src="_images/acf3881ac4826fc1ac88444101d2d62c831b99d967cb412e96d7006166fa66ec.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] 2
+</pre></div>
 </div>
 </div>
-<p>Note that the <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">=</span> <span class="pre">FALSE</span></code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+</details>
+</div>
+<p>Wichtig: Text und Code darf in <code class="docutils literal notranslate"><span class="pre">details</span></code> nicht kombiniert werden!</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -510,22 +545,13 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="aufgabe_test.html"
+       href="test_3.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Funktionen in R</p>
+        <p class="prev-next-title">Überschrift</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="test_1.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R Markdown</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -545,8 +571,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">R Markdown</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#including-plots">Including Plots</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aufgaben hinzufügen</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocke">Code-Blöcke</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a></li>
 </ul>
 
   </nav></div>

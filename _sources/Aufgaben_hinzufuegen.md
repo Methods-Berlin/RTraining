@@ -1,0 +1,92 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: R
+  language: R
+  name: ir
+---
+
+
+```{code-cell} r
+:tags: [remove-cell]
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Aufgaben hinzufügen
+
+Aufgaben der RTraining-Plattform sind in RMarkdown geschrieben und werden 
+automatisch vom Skript [rmd2myst.R](https://github.com/Methods-Berlin/RTraining/blob/main/rmd2myst.R)
+in myst-Markdown übersetzt. myst-Markdown ist die von JupyterBook unterstützte
+Markdown Version. Neue Aufgaben werden hinzugefügt, indem diese als Rmd-Dateien
+im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei 
+(z.B. bei "neue_Aufgabe.Rmd" ist der Name "neue_Aufgabe") im Dokument _toc.yml
+hinzugefügt werden.
+
+Die automatische Übersetzung unterstützt zur Zeit leider nicht alle Funktionen
+von RMarkdown. Das betrifft insbesondere die tags, die in R Code-Blöcken genutzt
+werden können (z.B. `eval = FALSE`). Außerdem können nicht alle html-tags (z.B.
+`aside` oder `details`) vollumfänglich genutzt werden.
+
+Im Folgenden werden die unterstützten Optionen demonstriert. Der Quelltext
+ist in [GitHub](https://github.com/Methods-Berlin/RTraining/tree/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd)
+hinterlegt.
+
+## Code-Blöcke
+
+Die folgenden Code-Blöcke werden unterstützt:
+
+```{code-cell} r
+# einfacher code-Block
+print(2)
+```
+
+```{code-cell} r
+:tags: [remove-input]
+# versteckter input, angezeigter output
+print(3)
+```
+
+```{code-cell} r
+:tags: [remove-input]
+
+# versteckter input, angezeigter output
+print(3)
+```
+
+```{code-cell} r
+:tags: [remove-cell]
+# versteckter input, versteckter output
+print(3)
+```
+
+```{code-cell} r
+:tags: [remove-cell]
+
+# versteckter input, versteckter output
+print(3)
+```
+
+## Details
+
+<details>
+Details mit Text
+</details>
+
+
+
+```{code-cell} r
+:tags: [hide-cell]
+
+# details mit code-Block
+print(2)
+```
+
+
+
+Wichtig: Text und Code darf in `details` nicht kombiniert werden!
