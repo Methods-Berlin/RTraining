@@ -1,0 +1,228 @@
+# Dieses R-Script übersetzt automatisch alle Rmd Dateien aus dem Ordner Aufgaben_rmd in Markdown Dateien, 
+# die für die Website verwendet werden können.
+
+#' replace_tags 
+#' 
+#' Ersetzt rmd und quarto tags (z.B. eval = FALSE) mit den passenden myst - tags. Siehe
+#' https://jupyterbook.org/en/stable/reference/cheatsheet.html#tags
+#' 
+#' @param tag z.B. eval
+#' @param value z.B. "FALSE"
+#' @return string mit passendem myst tag
+replace_tags <- function(tag, value){
+  
+  # damit wir FALSE und false, etc nicht separat behandeln müssen: 
+  tag <- tolower(tag)
+  value <- tolower(value)
+  
+  # Zuordnung:
+  if(tag == "echo"){
+    if(value == "false")
+      return(":tags: [remove-input]")
+    return("")  
+  }
+  if(tag == "eval"){
+    if(value == "false")
+      stop("eval = false kann nicht automatisch ersetzt werden. Bitte ersetze im Rmd den Teil ```{r, eval = FALSE} durch ```")
+    return("")
+  }
+  
+  if(tag == "include"){
+    if(value == "false")
+      return(":tags: [remove-cell]")
+    return("")
+  }
+  
+  stop("tag", tag, "nicht gefunden.")
+  
+}
+
+#' replace_details
+#' 
+#' ersetzt <details> - Blöcke, wenn diese Code enthalten
+#' @param x text
+#' @return x
+replace_details <- function(x){
+  for(i in 1:length(x)){
+    if(grepl("<details>", x[i])){
+      start <- i
+      # suche Ende
+      for(j in i:length(x)){
+        if(grepl("</details>", x[j])){
+          end <- j
+          
+          # check, ob code enthalten ist:
+          code <- grepl("```", x = x[start:end])
+          if(any(code)){
+            if(sum(code) < 2)
+              stop("Konnte für folgenden code - Block kein Ende finden:",
+                   x[start:end])
+            if(sum(code) > 2)
+              stop("Folgender details-Block enthält mehrere Code-Blöcke.",
+                   "Aktuell ist nur ein code-Block erlaubt.:",
+                   x[start:end])
+            code_start <- start + which(code)[1] - 1
+            code_end <- start + which(code)[2] - 1
+            cutoff <- c()
+            if(code_start > start+1)
+              cutoff <- c(cutoff, x[(start+1):code_start])
+            if(code_end < end-1)
+              cutoff <- c(cutoff, x[code_end:(end-1)])
+            if(length(cutoff) > 0)
+              warning("Die folgenden Text-Blöcke werden entfernt, da",
+                      "<details> aktuell nur code oder text, aber nicht beides ",
+                      "enthalten darf:",
+                      cutoff)
+            # details ersetzen
+            x[start] <- "\n"
+            x[end] <- "\n"
+            # tag einfügen
+            x[code_start] <- paste0(x[code_start], "\n:tags: hide-cell\n")
+          }
+          break
+        }
+      }
+    }
+  }
+  return(x)
+}
+
+#' replace_code
+#' 
+#' Ersetzt rmd code-Blöcke durch myst code-Blöcke. Einige der Tags werden automatisch
+#' übersetzt
+#' @param x text
+#' @return x 
+replace_code <- function(x){
+  for(i in 1:length(x)){
+    if(grepl(pattern = "```\\{ *r", x = x[i])){
+      # code starts
+      # check tags
+      tags_rmd <- x[i] |>
+        stringr::str_extract_all(pattern = '[a-zA-Z]+[0-9 ]*=[ ]*[\\"0-9a-zA-Z]+') |>
+        unlist() |>
+        gsub(pattern = " ", replacement = "")
+      if(length(tags_rmd) > 0)
+        tags_rmd <- stringr::str_split_fixed(tags_rmd, pattern = "=", n = 2)
+      
+      # search for end:
+      tags_qmd <- c()
+      for(j in (i+1):length(x)){
+        if(grepl(pattern = "```", x = x[j]))
+          break # code ends
+        if(grepl(pattern = "#\\Q|\\E", x = x[j])){
+          tag <- x[j] |>
+            stringr::str_extract(pattern = '[a-zA-Z]+[0-9 ]*:[ ]*[\\"0-9a-zA-Z]+') |>
+            unlist() |>
+            gsub(pattern = " ", replacement = "")
+          if(length(tag) > 0)
+            tags_qmd <- rbind(tags_qmd,
+                          stringr::str_split_fixed(tag, pattern = ":", n = 2)
+            )
+          # remove qmd tag:
+          x[j] <- ""
+        }
+      }
+      
+      tags <- rbind(tags_rmd, tags_qmd)
+      
+      if(length(tags) > 0){
+        
+        tags_myst <- apply(tags, 1, function(x) replace_tags(tag = x[1], value = x[2]))
+        
+      }else{
+        tags_myst <- c()
+      }
+      
+      # replace code start and add tags:
+      x[i] <- paste0(
+        c("````{code-cell} r",
+          tags_myst)
+        , 
+        collapse = "\n")
+    }
+  }
+  return(x)
+}
+
+#' rmd2myst
+#' @param file_name Name der Rmd Datei. Diese muss sich im aktuellen working directory befinden
+#' @param source_folder wo ist die rmd - Datei gespeichert?
+#' @param target_folder wo soll die Datei gespeichert werden?
+#' @param myst_yaml optional: YAML header für die myst - Datei
+#' @return erstellt eine .md Datei im myst - Style
+rmd2myst <- function(file_name,
+                     source_folder,
+                     target_folder,
+                     myst_yaml = NULL) {
+  # Einlesen der Rmd Datei
+  save_as <- paste0(target_folder, "\\", gsub("\\.Rmd", ".md", file_name))
+  dat <- file(paste0(source_folder, "\\", file_name))
+  x <- readLines(dat) # jede Zeile im Dokument wird zu einem Element im Vektor
+  close(dat)
+  
+  # Leere Zeilen zu Beginn der Datei entfernen, falls die Datei nicht
+  # mit dem yaml header beginnt.
+  for(i in 1:length(x))
+    if(x[i] != "") break;
+  x <- x[i:length(x)]
+  
+  # yaml entfernen
+  if (grepl("---", x[1])) {
+    yaml_end <- grep("---", x)[2]
+    x <- x[(yaml_end + 1L):length(x)]
+  }
+  
+  # Neuer YAML Header. Wir definieren hier den neuen Standard header,
+  # falls keiner übergeben wurde
+  if(is.null(myst_yaml))
+    myst_yaml <- 
+    "
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: R
+  language: R
+  name: ir
+---
+"
+  x <- c(myst_yaml,
+         x)
+  
+  # Ersetzen der code-chunks
+  
+  x <- replace_code(x = x)
+
+  # ersetzen der details
+  x <- replace_details(x = x)
+  
+  # Überprüfen, ob alle code-chunks ersetzt wurden:
+  if(any(grepl(pattern = "```\\{[\\s]*r", x = x))){
+    stop("Die folgenden code-chunk konnte nicht automatisch übersetzt werden: \n",
+         paste0(x[grepl(pattern = "```\\{[\\s]*r", x = x)], collapse = "\n")
+    )
+  }
+  
+  cat(x, file = save_as, sep = "\n")
+}
+
+translate_files <- function(source_folder = "Aufgaben_rmd", 
+                            target_folder = "."){
+  datei_namen <- list.files(path = source_folder, 
+                            pattern = ".Rmd$",
+                            full.names = FALSE)
+  lapply(datei_namen, 
+         rmd2myst, 
+         source_folder = source_folder,
+         target_folder = target_folder)
+}
+
+
+translate_files(source_folder = "Aufgaben_rmd", 
+                target_folder = ".")

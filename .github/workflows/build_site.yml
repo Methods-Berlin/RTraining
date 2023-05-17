@@ -27,6 +27,12 @@ jobs:
       run: |
         conda activate rtraining
         Rscript -e "IRkernel::installspec()"
+    # translate Rmd to myst
+    - name: R Kernel
+      shell: bash -el {0} # need to restart bash; apparently this may do the trick
+      run: |
+        conda activate rtraining
+        Rscript Aufgaben_rmd/rmd2myst.R
     # Build the book
     - name: Build the book
       shell: bash -el {0}
