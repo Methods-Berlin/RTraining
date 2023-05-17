@@ -179,8 +179,7 @@ rmd2myst <- function(file_name,
   # falls keiner übergeben wurde
   if(is.null(myst_yaml))
     myst_yaml <- 
-    "
----
+"---
 jupytext:
   formats: md:myst
   text_representation:
