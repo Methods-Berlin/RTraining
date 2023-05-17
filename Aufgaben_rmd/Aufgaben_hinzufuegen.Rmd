@@ -1,0 +1,74 @@
+---
+title: "Aufgaben hinzufügen"
+output: html_document
+date: "2023-05-17"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Aufgaben hinzufügen
+
+Aufgaben der RTraining-Plattform sind in RMarkdown geschrieben und werden 
+automatisch vom Skript [rmd2myst.R](https://github.com/Methods-Berlin/RTraining/blob/main/rmd2myst.R)
+in myst-Markdown übersetzt. myst-Markdown ist die von JupyterBook unterstützte
+Markdown Version. Neue Aufgaben werden hinzugefügt, indem diese als Rmd-Dateien
+im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei 
+(z.B. bei "neue_Aufgabe.Rmd" ist der Name "neue_Aufgabe") im Dokument _toc.yml
+hinzugefügt werden.
+
+Die automatische Übersetzung unterstützt zur Zeit leider nicht alle Funktionen
+von RMarkdown. Das betrifft insbesondere die tags, die in R Code-Blöcken genutzt
+werden können (z.B. `eval = FALSE`). Außerdem können nicht alle html-tags (z.B.
+`aside` oder `details`) vollumfänglich genutzt werden.
+
+Im Folgenden werden die unterstützten Optionen demonstriert. Der Quelltext
+ist in [GitHub](https://github.com/Methods-Berlin/RTraining/tree/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd)
+hinterlegt.
+
+## Code-Blöcke
+
+Die folgenden Code-Blöcke werden unterstützt:
+
+```{r}
+# einfacher code-Block
+print(2)
+```
+
+```{r, echo = FALSE}
+# versteckter input, angezeigter output
+print(3)
+```
+
+```{r}
+#|echo: false
+# versteckter input, angezeigter output
+print(3)
+```
+
+```{r, include=FALSE}
+# versteckter input, versteckter output
+print(3)
+```
+
+```{r}
+#|include: false
+# versteckter input, versteckter output
+print(3)
+```
+
+## Details
+
+<details>
+Details mit Text
+</details>
+
+<details>
+```{r}
+# details mit code-Block
+print(2)
+```
+</details>
+
+Wichtig: Text und Code darf in `details` nicht kombiniert werden!
