@@ -1,6 +1,8 @@
 # Dieses R-Script übersetzt automatisch alle Rmd Dateien aus dem Ordner Aufgaben_rmd in Markdown Dateien, 
 # die für die Website verwendet werden können.
 
+library(stringr)
+
 #' replace_tags 
 #' 
 #' Ersetzt rmd und quarto tags (z.B. eval = FALSE) mit den passenden myst - tags. Siehe
