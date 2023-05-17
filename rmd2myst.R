@@ -79,7 +79,7 @@ replace_details <- function(x){
             x[start] <- "\n"
             x[end] <- "\n"
             # tag einfügen
-            x[code_start] <- paste0(x[code_start], "\n:tags: hide-cell\n")
+            x[code_start] <- paste0(x[code_start], "\n:tags: [hide-cell]\n")
           }
           break
         }
