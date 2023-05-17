@@ -6,7 +6,6 @@ output:
 date: "2023-05-12"
 ---
 
-Dies ist ein Testdokument.
 
 # Überschrift
 
