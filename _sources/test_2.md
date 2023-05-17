@@ -14,7 +14,6 @@ kernelspec:
 ---
 
 
-Dies ist ein Testdokument.
 
 # Überschrift
 
