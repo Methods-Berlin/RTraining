@@ -31,27 +31,37 @@ hinterlegt.
 
 Die folgenden Code-Blöcke werden unterstützt:
 
+### Code-Block ohne tags:
+
 ```{r}
 # einfacher code-Block
 print(2)
 ```
 
+### Code-Block mit echo = FALSE
+
+In Rmarkdown-Style:
 ```{r, echo = FALSE}
 # versteckter input, angezeigter output
 print(3)
 ```
 
+In quarto-Style:
 ```{r}
 #|echo: false
 # versteckter input, angezeigter output
 print(3)
 ```
 
+### Code-Block mit include = FALSE
+
+In Rmarkdown-Style:
 ```{r, include=FALSE}
 # versteckter input, versteckter output
 print(3)
 ```
 
+In quarto-Style:
 ```{r}
 #|include: false
 # versteckter input, versteckter output
@@ -60,9 +70,13 @@ print(3)
 
 ## Details
 
+Details nur mit Text:
+
 <details>
 Details mit Text
 </details>
+
+Details nur mit code:
 
 <details>
 ```{r}

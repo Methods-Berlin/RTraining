@@ -4,10 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown-notebooks
-- file: aufgabe_test
-- file: test
+- file: Aufgaben_hinzufuegen
 - file: test_1
 - file: test_2
 - file: test_3
-- file: Aufgaben_hinzufuegen
