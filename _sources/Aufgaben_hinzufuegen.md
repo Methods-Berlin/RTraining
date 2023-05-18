@@ -20,6 +20,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Aufgaben hinzufügen
 
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd download=Aufgaben_hinzufuegen.Rmd>RMarkdown-Datei herunterladen</a>
+
+
 Aufgaben der RTraining-Plattform sind in RMarkdown geschrieben und werden 
 automatisch vom Skript [rmd2myst.R](https://github.com/Methods-Berlin/RTraining/blob/main/rmd2myst.R)
 in myst-Markdown übersetzt. myst-Markdown ist die von JupyterBook unterstützte
