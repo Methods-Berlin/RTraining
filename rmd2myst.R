@@ -147,6 +147,31 @@ replace_code <- function(x){
   return(x)
 }
 
+#' add_download_button
+#' 
+#' Fügt einen download-link hinzu (aktuell noch kein Button)
+#' @param file_name_rmd z.B. Uebung.Rmd
+#' @param x text
+#' @return x
+add_download_button <- function(file_name_rmd, x){
+  
+  location <- paste0("https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/", 
+                     file_name_rmd)
+  
+  link <- paste0("<a href=",location," download=",file_name_rmd,">RMarkdown-Datei herunterladen</a>")
+  
+  for(i in 1:length(x)){
+    
+    if(grepl("# ", x[i])){
+      x[i] <- paste0(x[i], "\n\n", link, "\n")
+      break
+    }
+    
+  }
+  
+  return(x)
+}
+
 #' rmd2myst
 #' @param file_name Name der Rmd Datei. Diese muss sich im aktuellen working directory befinden
 #' @param source_folder wo ist die rmd - Datei gespeichert?
@@ -195,6 +220,10 @@ kernelspec:
 "
   x <- c(myst_yaml,
          x)
+  
+  # Download-Button hinzufügen
+  x <- add_download_button(file_name_rmd = file_name, 
+                           x = x)
   
   # Ersetzen der code-chunks
   
