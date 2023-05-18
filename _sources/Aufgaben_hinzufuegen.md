@@ -41,17 +41,23 @@ hinterlegt.
 
 Die folgenden Code-Blöcke werden unterstützt:
 
+### Code-Block ohne tags:
+
 ```{code-cell} r
 # einfacher code-Block
 print(2)
 ```
 
+### Code-Block mit echo = FALSE
+
+In Rmarkdown-Style:
 ```{code-cell} r
 :tags: [remove-input]
 # versteckter input, angezeigter output
 print(3)
 ```
 
+In quarto-Style:
 ```{code-cell} r
 :tags: [remove-input]
 
@@ -59,12 +65,16 @@ print(3)
 print(3)
 ```
 
+### Code-Block mit include = FALSE
+
+In Rmarkdown-Style:
 ```{code-cell} r
 :tags: [remove-cell]
 # versteckter input, versteckter output
 print(3)
 ```
 
+In quarto-Style:
 ```{code-cell} r
 :tags: [remove-cell]
 
@@ -74,9 +84,13 @@ print(3)
 
 ## Details
 
+Details nur mit Text:
+
 <details>
 Details mit Text
 </details>
+
+Details nur mit code:
 
 
 
