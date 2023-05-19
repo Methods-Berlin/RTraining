@@ -7,19 +7,10 @@ Hier findest Du Übungsaufgaben zur Vertiefung Deiner R-Kenntnisse.
 
 Alternative für Details:
 
-```{solution-start} Aufgabe 1
-```
-Erklärung zur Lösung
+```{toggle}
 
 ```{code-cell} r
-dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
-plot(dat)
-```
-
-```{code-cell} r
-2+4
-```
-
-
-```{solution-end}
+1+2
+````
+Lösungsvorschläge
 ```
