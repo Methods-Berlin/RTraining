@@ -13,19 +13,19 @@ kernelspec:
 ---
 
 
-## Test Dokument
+# Test Dokument
 
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/test_4.Rmd download=test_4.Rmd>RMarkdown-Datei herunterladen</a>
 
 
-### Erstes Thema 
+## Erstes Thema 
 
 
 <details>
 Dies ist ein versteckter Textbaustein.
 </details> 
 
-#### Unterthema 
+### Unterthema 
 
 - Liste
 - Liste
@@ -36,7 +36,7 @@ Gleichung: $e^{i\pi} = -1$
 2. def
 3. ghi
 
-##### Unterunterthema
+#### Unterunterthema
 
 - Liste
 - Liste
@@ -47,7 +47,7 @@ Gleichung: $e^{i\pi} = -1$
 2. def
 3. ghi
 
-### Zweites Thema
+## Zweites Thema
 
 
 

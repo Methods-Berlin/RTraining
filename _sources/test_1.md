@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 
-## R Markdown
+# R Markdown
 
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/test_1.Rmd download=test_1.Rmd>RMarkdown-Datei herunterladen</a>
 
@@ -26,7 +26,7 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-### Including Plots
+## Including Plots
 
 You can also embed plots, for example:
 

@@ -18,7 +18,7 @@ kernelspec:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Aufgaben hinzufügen
+# Aufgaben hinzufügen
 
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd download=Aufgaben_hinzufuegen.Rmd>RMarkdown-Datei herunterladen</a>
 
@@ -65,18 +65,18 @@ Im Folgenden werden die unterstützten Optionen demonstriert. Der Quelltext
 ist in [GitHub](https://github.com/Methods-Berlin/RTraining/tree/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd)
 hinterlegt.
 
-### Code-Blöcke
+## Code-Blöcke
 
 Die folgenden Code-Blöcke werden unterstützt:
 
-#### Code-Block ohne tags:
+### Code-Block ohne tags:
 
 ```{code-cell} r
 # einfacher code-Block
 print(2)
 ```
 
-#### Code-Block mit eval = FALSE
+### Code-Block mit eval = FALSE
 
 In Rmarkdown-Style:
 ``` r
@@ -91,7 +91,7 @@ In quarto-Style:
 print(3)
 ```
 
-#### Code-Block mit echo = FALSE
+### Code-Block mit echo = FALSE
 
 In Rmarkdown-Style:
 ```{code-cell} r
@@ -108,7 +108,7 @@ In quarto-Style:
 print(3)
 ```
 
-#### Code-Block mit include = FALSE
+### Code-Block mit include = FALSE
 
 In Rmarkdown-Style:
 ```{code-cell} r
@@ -125,7 +125,7 @@ In quarto-Style:
 print(3)
 ```
 
-### Details
+## Details
 
 Details nur mit Text:
 
@@ -148,7 +148,7 @@ print(2)
 
 Wichtig: Text und Code darf in `details` nicht kombiniert werden!
 
-#### Details - code-Block mit eval = FALSE
+### Details - code-Block mit eval = FALSE
 
 In Rmarkdown-Style:
 
@@ -175,7 +175,7 @@ print(3)
 
 
 
-#### Details - code-Block mit echo = FALSE
+### Details - code-Block mit echo = FALSE
 
 In Rmarkdown-Style:
 
