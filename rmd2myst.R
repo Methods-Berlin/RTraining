@@ -25,7 +25,7 @@ replace_tags <- function(tag, value){
   }
   if(tag == "eval"){
     if(value == "false")
-      stop("eval = false kann nicht automatisch ersetzt werden. Bitte ersetze im Rmd den Teil ```{r, eval = FALSE} durch ```")
+      return("")
     return("")
   }
   
@@ -131,17 +131,34 @@ replace_code <- function(x){
       if(length(tags) > 0){
         
         tags_myst <- apply(tags, 1, function(x) replace_tags(tag = x[1], value = x[2]))
+      
+      } else {
         
-      }else{
         tags_myst <- c()
       }
+
       
-      # replace code start and add tags:
-      x[i] <- paste0(
-        c("```{code-cell} r",
-          tags_myst)
-        , 
-        collapse = "\n")
+      if(length(tags) > 0 & tolower(tags[1]) == "eval" & tolower(tags[2]) == "false"){
+        
+        # replace code start and add tags:
+        x[i] <- paste0(
+          c("``` r",
+            tags_myst)
+          , 
+          collapse = "\n")
+        
+      } else {
+        
+        # replace code start and add tags:
+        x[i] <- paste0(
+          c("```{code-cell} r",
+            tags_myst)
+          , 
+          collapse = "\n")
+        
+      }
+        
+      
     }
   }
   return(x)
