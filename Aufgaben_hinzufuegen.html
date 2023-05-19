@@ -452,6 +452,30 @@ Markdown Version. Neue Aufgaben werden hinzugefügt, indem diese als Rmd-Dateien
 im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei
 (z.B. bei “neue_Aufgabe.Rmd” ist der Name “neue_Aufgabe”) im Dokument _toc.yml
 hinzugefügt werden.</p>
+<p>Wenn die Aufgabe R-Pakete nutzt, muss zusätzlich überprüft werden, ob dieses
+bereits installiert wird. Alle bisher installierten Pakete werden im Dokument
+<a class="reference external" href="https://github.com/Methods-Berlin/RTraining/blob/main/environment.yml">environment.yml</a>
+aufgefüht. Hier steht beispielsweise:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span><span class="p">:</span>
+  <span class="o">-</span> <span class="o">...</span>
+  <span class="o">-</span> <span class="n">r</span><span class="o">-</span><span class="n">tidyverse</span>
+</pre></div>
+</div>
+<p>Es wird also das gesamte tidyverse installiert. Wenn wir das Paket <code class="docutils literal notranslate"><span class="pre">psych</span></code> hinzufügen
+wollen, dann müssen wir erst schauen, ob es dieses für Anaconda gibt. Hierfür
+gehen wir auf <a class="reference external" href="https://anaconda.org/">anaconda.org</a> und suchen nach <code class="docutils literal notranslate"><span class="pre">r-psych</span></code>.
+Wichtig: R-Pakte fangen auf Anaconda immer mit <code class="docutils literal notranslate"><span class="pre">r-</span></code> an! <a class="reference external" href="https://anaconda.org/search?q=type%3Aconda+r-psych">r-psych</a>
+existiert auf Anaconda und wir können es daher einfach hinzufügen, indem
+wir es in <a class="reference external" href="https://github.com/Methods-Berlin/RTraining/blob/main/environment.yml">environment.yml</a>
+ergänzen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span><span class="p">:</span>
+  <span class="o">-</span> <span class="o">...</span>
+  <span class="o">-</span> <span class="n">r</span><span class="o">-</span><span class="n">tidyverse</span>
+  <span class="o">-</span> <span class="n">r</span><span class="o">-</span><span class="n">psych</span>
+</pre></div>
+</div>
+<p>Das Paket wird nun bei nächsten Erstellen der Webseite installiert und kann mit
+<code class="docutils literal notranslate"><span class="pre">library(psych)</span></code> aufgerufen werden.</p>
 <p>Die automatische Übersetzung unterstützt zur Zeit leider nicht alle Funktionen
 von RMarkdown. Das betrifft insbesondere die tags, die in R Code-Blöcken genutzt
 werden können (z.B. <code class="docutils literal notranslate"><span class="pre">eval</span> <span class="pre">=</span> <span class="pre">FALSE</span></code>). Außerdem können nicht alle html-tags (z.B.

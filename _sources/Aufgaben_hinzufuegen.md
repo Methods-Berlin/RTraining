@@ -31,6 +31,31 @@ im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei
 (z.B. bei "neue_Aufgabe.Rmd" ist der Name "neue_Aufgabe") im Dokument _toc.yml
 hinzugefügt werden.
 
+Wenn die Aufgabe R-Pakete nutzt, muss zusätzlich überprüft werden, ob dieses 
+bereits installiert wird. Alle bisher installierten Pakete werden im Dokument
+[environment.yml](https://github.com/Methods-Berlin/RTraining/blob/main/environment.yml)
+aufgefüht. Hier steht beispielsweise:
+```
+dependencies:
+  - ...
+  - r-tidyverse
+```
+Es wird also das gesamte tidyverse installiert. Wenn wir das Paket `psych` hinzufügen
+wollen, dann müssen wir erst schauen, ob es dieses für Anaconda gibt. Hierfür 
+gehen wir auf [anaconda.org](https://anaconda.org/) und suchen nach `r-psych`.
+Wichtig: R-Pakte fangen auf Anaconda immer mit `r-` an! [r-psych](https://anaconda.org/search?q=type%3Aconda+r-psych)
+existiert auf Anaconda und wir können es daher einfach hinzufügen, indem
+wir es in [environment.yml](https://github.com/Methods-Berlin/RTraining/blob/main/environment.yml) 
+ergänzen:
+```
+dependencies:
+  - ...
+  - r-tidyverse
+  - r-psych
+```
+Das Paket wird nun bei nächsten Erstellen der Webseite installiert und kann mit 
+`library(psych)` aufgerufen werden.
+
 Die automatische Übersetzung unterstützt zur Zeit leider nicht alle Funktionen
 von RMarkdown. Das betrifft insbesondere die tags, die in R Code-Blöcken genutzt
 werden können (z.B. `eval = FALSE`). Außerdem können nicht alle html-tags (z.B.
