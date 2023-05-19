@@ -9,8 +9,9 @@ Alternative für Details:
 
 ```{toggle}
 
-```{code-cell} r
-1+2
-````
-Lösungsvorschläge
+  ```{code-cell} r
+  1+2
+  ````
+  Lösungsvorschläge
+  
 ```

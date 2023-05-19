@@ -1,0 +1,27 @@
+---
+title: "test"
+output: html_document
+date: "2023-05-12"
+---
+
+# Test Dokument 2
+
+## Erstes Thema
+
+## Zweites Thema
+
+<details>
+```{r}
+dat <- data.frame("Spalte 1" = c(4,3,2,1), "Spalte 2" = c(5,6,7,8))
+plot(dat)
+```
+</details> 
+
+```{r include=FALSE}
+dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
+plot(dat)
+```
+
+
+
+
