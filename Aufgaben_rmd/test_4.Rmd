@@ -4,16 +4,16 @@ output: html_document
 date: "2023-05-12"
 ---
 
-## Test Dokument
+# Test Dokument
 
-### Erstes Thema 
+## Erstes Thema 
 
 
 <details>
 Dies ist ein versteckter Textbaustein.
 </details> 
 
-#### Unterthema 
+### Unterthema 
 
 - Liste
 - Liste
@@ -24,7 +24,7 @@ Gleichung: $e^{i\pi} = -1$
 2. def
 3. ghi
 
-##### Unterunterthema
+#### Unterunterthema
 
 - Liste
 - Liste
@@ -35,7 +35,7 @@ Gleichung: $e^{i\pi} = -1$
 2. def
 3. ghi
 
-### Zweites Thema
+## Zweites Thema
 
 <details>
 ```{r}
