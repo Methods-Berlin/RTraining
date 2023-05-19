@@ -61,8 +61,15 @@ Gleichung: $e^{i\pi} = -1$
 
 ```{code-cell} r
 :tags: [remove-input]
-
+dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
+plot(dat)
 ```
+
+``` r
+17+34
+```
+
+
 
 
 

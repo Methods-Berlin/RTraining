@@ -157,12 +157,11 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Aufgaben hinzufügen</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="test_1.html">R Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test_2.html">Überschrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test_3.html">Überschrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test_4.html">Test Dokument</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_5.html">Test Dokument 2</a></li>
 </ul>
 
     </div>
@@ -422,16 +421,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aufgaben hinzufügen</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocke">Code-Blöcke</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-ohne-tags">Code-Block ohne tags:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-echo-false">Code-Block mit echo = FALSE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-include-false">Code-Block mit include = FALSE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocke">Code-Blöcke</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-ohne-tags">Code-Block ohne tags:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-eval-false">Code-Block mit eval = FALSE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-echo-false">Code-Block mit echo = FALSE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-include-false">Code-Block mit include = FALSE</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details-code-block-mit-eval-false">Details - code-Block mit eval = FALSE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details-code-block-mit-echo-false">Details - code-Block mit echo = FALSE</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -483,12 +485,11 @@ werden können (z.B. <code class="docutils literal notranslate"><span class="pre
 <p>Im Folgenden werden die unterstützten Optionen demonstriert. Der Quelltext
 ist in <a class="reference external" href="https://github.com/Methods-Berlin/RTraining/tree/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd">GitHub</a>
 hinterlegt.</p>
-</section>
 <section id="code-blocke">
-<h1>Code-Blöcke<a class="headerlink" href="#code-blocke" title="Permalink to this headline">#</a></h1>
+<h2>Code-Blöcke<a class="headerlink" href="#code-blocke" title="Permalink to this headline">#</a></h2>
 <p>Die folgenden Code-Blöcke werden unterstützt:</p>
 <section id="code-block-ohne-tags">
-<h2>Code-Block ohne tags:<a class="headerlink" href="#code-block-ohne-tags" title="Permalink to this headline">#</a></h2>
+<h3>Code-Block ohne tags:<a class="headerlink" href="#code-block-ohne-tags" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># einfacher code-Block</span>
@@ -503,8 +504,21 @@ hinterlegt.</p>
 </div>
 </div>
 </section>
+<section id="code-block-mit-eval-false">
+<h3>Code-Block mit eval = FALSE<a class="headerlink" href="#code-block-mit-eval-false" title="Permalink to this headline">#</a></h3>
+<p>In Rmarkdown-Style:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># nicht ausgeführter Code</span>
+<span class="nf">print</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In quarto-Style:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># nicht ausgeführter Code</span>
+<span class="nf">print</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 <section id="code-block-mit-echo-false">
-<h2>Code-Block mit echo = FALSE<a class="headerlink" href="#code-block-mit-echo-false" title="Permalink to this headline">#</a></h2>
+<h3>Code-Block mit echo = FALSE<a class="headerlink" href="#code-block-mit-echo-false" title="Permalink to this headline">#</a></h3>
 <p>In Rmarkdown-Style:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -523,13 +537,13 @@ hinterlegt.</p>
 </div>
 </section>
 <section id="code-block-mit-include-false">
-<h2>Code-Block mit include = FALSE<a class="headerlink" href="#code-block-mit-include-false" title="Permalink to this headline">#</a></h2>
+<h3>Code-Block mit include = FALSE<a class="headerlink" href="#code-block-mit-include-false" title="Permalink to this headline">#</a></h3>
 <p>In Rmarkdown-Style:</p>
 <p>In quarto-Style:</p>
 </section>
 </section>
 <section id="details">
-<h1>Details<a class="headerlink" href="#details" title="Permalink to this headline">#</a></h1>
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">#</a></h2>
 <p>Details nur mit Text:</p>
 <details>
 Details mit Text
@@ -555,6 +569,68 @@ Details mit Text
 </details>
 </div>
 <p>Wichtig: Text und Code darf in <code class="docutils literal notranslate"><span class="pre">details</span></code> nicht kombiniert werden!</p>
+<section id="details-code-block-mit-eval-false">
+<h3>Details - code-Block mit eval = FALSE<a class="headerlink" href="#details-code-block-mit-eval-false" title="Permalink to this headline">#</a></h3>
+<p>In Rmarkdown-Style:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">:</span><span class="n">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">hide</span><span class="o">-</span><span class="n">cell</span><span class="p">]</span>
+
+<span class="c1"># nicht ausgeführter Code</span>
+<span class="nf">print</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In quarto-Style:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">:</span><span class="n">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">hide</span><span class="o">-</span><span class="n">cell</span><span class="p">]</span>
+
+
+<span class="c1"># nicht ausgeführter Code</span>
+<span class="nf">print</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="details-code-block-mit-echo-false">
+<h3>Details - code-Block mit echo = FALSE<a class="headerlink" href="#details-code-block-mit-echo-false" title="Permalink to this headline">#</a></h3>
+<p>In Rmarkdown-Style:</p>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># nicht ausgeführter Code</span>
+<span class="nf">print</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] 3
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>In quarto-Style:</p>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># nicht ausgeführter Code</span>
+<span class="nf">print</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] 3
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -624,16 +700,19 @@ Details mit Text
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aufgaben hinzufügen</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocke">Code-Blöcke</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-ohne-tags">Code-Block ohne tags:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-echo-false">Code-Block mit echo = FALSE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-include-false">Code-Block mit include = FALSE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocke">Code-Blöcke</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-ohne-tags">Code-Block ohne tags:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-eval-false">Code-Block mit eval = FALSE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-echo-false">Code-Block mit echo = FALSE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-block-mit-include-false">Code-Block mit include = FALSE</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details-code-block-mit-eval-false">Details - code-Block mit eval = FALSE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details-code-block-mit-echo-false">Details - code-Block mit echo = FALSE</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>
