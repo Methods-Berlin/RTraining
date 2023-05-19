@@ -25,7 +25,7 @@ replace_tags <- function(tag, value){
   }
   if(tag == "eval"){
     if(value == "false")
-      stop("eval = false kann nicht automatisch ersetzt werden. Bitte ersetze im Rmd den Teil ```{r, eval = FALSE} durch ```")
+      return(":tags: [NO-EVAL]")
     return("")
   }
   
@@ -112,14 +112,17 @@ replace_code <- function(x){
       for(j in (i+1):length(x)){
         if(grepl(pattern = "```", x = x[j]))
           break # code ends
-        if(grepl(pattern = "#\\Q|\\E", x = x[j])){
+        
+        # check for qmd-tags. These start with #| and use tag: value
+        if(grepl(pattern = "#\\Q|\\E", x = x[j])){ # check for #|
           tag <- x[j] |>
+            # extract tag: value 
             stringr::str_extract(pattern = '[a-zA-Z]+[0-9 ]*:[ ]*[\\"0-9a-zA-Z]+') |>
             unlist() |>
             gsub(pattern = " ", replacement = "")
           if(length(tag) > 0)
             tags_qmd <- rbind(tags_qmd,
-                          stringr::str_split_fixed(tag, pattern = ":", n = 2)
+                              stringr::str_split_fixed(tag, pattern = ":", n = 2)
             )
           # remove qmd tag:
           x[j] <- ""
@@ -132,16 +135,30 @@ replace_code <- function(x){
         
         tags_myst <- apply(tags, 1, function(x) replace_tags(tag = x[1], value = x[2]))
         
-      }else{
+      } else {
+        
         tags_myst <- c()
+        
       }
       
-      # replace code start and add tags:
-      x[i] <- paste0(
-        c("```{code-cell} r",
-          tags_myst)
-        , 
-        collapse = "\n")
+      if(any(tags_myst == ":tags: [NO-EVAL]")){
+        
+        # replace code start and add tags:
+        x[i] <- paste0(
+          c("``` r",
+            tags_myst[tags_myst != ":tags: [NO-EVAL]"])
+          , 
+          collapse = "\n")
+        
+      } else {
+        
+        # replace code start and add tags:
+        x[i] <- paste0(
+          c("```{code-cell} r",
+            tags_myst)
+          , 
+          collapse = "\n")
+      }
     }
   }
   return(x)
@@ -204,7 +221,7 @@ rmd2myst <- function(file_name,
   # falls keiner übergeben wurde
   if(is.null(myst_yaml))
     myst_yaml <- 
-"---
+    "---
 jupytext:
   formats: md:myst
   text_representation:
@@ -228,7 +245,7 @@ kernelspec:
   # Ersetzen der code-chunks
   
   x <- replace_code(x = x)
-
+  
   # ersetzen der details
   x <- replace_details(x = x)
   

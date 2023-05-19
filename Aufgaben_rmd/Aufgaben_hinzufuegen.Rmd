@@ -52,18 +52,33 @@ Im Folgenden werden die unterstützten Optionen demonstriert. Der Quelltext
 ist in [GitHub](https://github.com/Methods-Berlin/RTraining/tree/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd)
 hinterlegt.
 
-## Code-Blöcke
+### Code-Blöcke
 
 Die folgenden Code-Blöcke werden unterstützt:
 
-### Code-Block ohne tags:
+#### Code-Block ohne tags:
 
 ```{r}
 # einfacher code-Block
 print(2)
 ```
 
-### Code-Block mit echo = FALSE
+#### Code-Block mit eval = FALSE
+
+In Rmarkdown-Style:
+```{r, eval=FALSE}
+# nicht ausgeführter Code
+print(3)
+```
+
+In quarto-Style:
+```{r}
+#|eval: false
+# nicht ausgeführter Code
+print(3)
+```
+
+#### Code-Block mit echo = FALSE
 
 In Rmarkdown-Style:
 ```{r, echo = FALSE}
@@ -78,7 +93,7 @@ In quarto-Style:
 print(3)
 ```
 
-### Code-Block mit include = FALSE
+#### Code-Block mit include = FALSE
 
 In Rmarkdown-Style:
 ```{r, include=FALSE}
@@ -93,7 +108,7 @@ In quarto-Style:
 print(3)
 ```
 
-## Details
+### Details
 
 Details nur mit Text:
 
@@ -111,3 +126,41 @@ print(2)
 </details>
 
 Wichtig: Text und Code darf in `details` nicht kombiniert werden!
+
+#### Details - code-Block mit eval = FALSE
+
+In Rmarkdown-Style:
+<details>
+```{r, eval=FALSE}
+# nicht ausgeführter Code
+print(3)
+```
+</details>
+
+In quarto-Style:
+<details>
+```{r}
+#|eval: false
+# nicht ausgeführter Code
+print(3)
+```
+</details>
+
+#### Details - code-Block mit echo = FALSE
+
+In Rmarkdown-Style:
+<details>
+```{r, echo=FALSE}
+# nicht ausgeführter Code
+print(3)
+```
+</details>
+
+In quarto-Style:
+<details>
+```{r}
+#|echo: false
+# nicht ausgeführter Code
+print(3)
+```
+</details>
