@@ -143,12 +143,8 @@ replace_code <- function(x){
       
       if(any(tags_myst == ":tags: [NO-EVAL]")){
         
-        # replace code start and add tags:
-        x[i] <- paste0(
-          c("``` r",
-            tags_myst[tags_myst != ":tags: [NO-EVAL]"])
-          , 
-          collapse = "\n")
+        # replace code start:
+        x[i] <- "``` r"
         
       } else {
         
