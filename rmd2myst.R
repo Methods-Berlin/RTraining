@@ -66,6 +66,11 @@ replace_details <- function(x){
             code_start <- start + which(code)[1] - 1
             code_end <- start + which(code)[2] - 1
             cutoff <- c()
+            # check, ob eval=false in details 
+            if(any(grepl("``` r", x = x[start:end]))){
+              x[code_start] <- paste0("<pre>\n<code>")
+              x[code_end] <- paste0("</code>\n</pre>")
+            }else{
             if(code_start > start+1)
               cutoff <- c(cutoff, x[(start+1):code_start])
             if(code_end < end-1)
@@ -80,6 +85,7 @@ replace_details <- function(x){
             x[end] <- "\n"
             # tag einfügen
             x[code_start] <- paste0(x[code_start], "\n:tags: [hide-cell]\n")
+            }
           }
           break
         }
