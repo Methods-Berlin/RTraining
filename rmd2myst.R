@@ -36,7 +36,10 @@ file_in_toc <- function(Rmd_file_names, toc_file_name = "_toc.yml"){
   
   if(length(issue_file) != 0){
     issue_file <- paste0(
-      "The following Rmarkdown-files have not been found in _toc.yml:\n\n",
+      "---
+title: Fehlende RMarkdown-Dateien in _toc.yml
+---
+The following Rmarkdown-files have not been found in _toc.yml:\n\n",
         paste0(issue_file, collapse = "\n")
       )
     write_file <- file("rmd_not_in_toc.md")
