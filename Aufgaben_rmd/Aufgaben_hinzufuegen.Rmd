@@ -141,7 +141,6 @@ In quarto-Style:
 <details>
 ```{r}
 #|eval: false
-# nicht ausgeführter Code
 print(3)
 ```
 </details>
