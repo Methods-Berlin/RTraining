@@ -3,3 +3,4 @@ _build/
 *.md
 !intro.md
 .Rhistory
+.DS_Store
