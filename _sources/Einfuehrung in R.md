@@ -15,7 +15,7 @@ kernelspec:
 
 # Einführung in R
 
-<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Einführung in R.Rmd download=Einführung in R.Rmd>RMarkdown-Datei herunterladen</a>
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei herunterladen</a>
 
 
 ## Objekt, Logische Operationen 
