@@ -49,7 +49,7 @@ jobs:
       if: steps.check_file.outputs.exists == 'true'
       id: get_content
       run: |
-        CONTENT=$(cat my_issues.md)
+        CONTENT=$(cat rmd_not_in_toc.md)
         echo "::set-output name=content::$CONTENT"
     - name: Create comment on issue
       if: steps.check_file.outputs.exists == 'true'
