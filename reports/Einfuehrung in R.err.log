@@ -15,6 +15,7 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
+
 #a)
 schüler_1 <- factor(c("Anton", "Luca", "Matteo", "Max", "Emil"), ordered = TRUE)
 
@@ -27,7 +28,6 @@ schüler_2 <- factor(schüler_1, ordered=TRUE, levels=c("Anton", "Luca", "Matteo
 #d)
 print(schüler_1) #alternativ auch ohne "print()"
 print(schüler_2) #alternativ auch ohne "print()"
-
 ------------------
 
 
