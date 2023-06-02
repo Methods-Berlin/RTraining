@@ -33,6 +33,51 @@ jobs:
       run: |
         conda activate rtraining
         Rscript rmd2myst.R
+    # check if all Rmd files are mentioned in toc
+    - name: Check if rmd_not_in_toc.md exists
+      id: check_file
+      run: |
+        if [ -f "rmd_not_in_toc.md" ]; then
+          echo "::set-output name=exists::true"
+        else
+          echo "::set-output name=exists::false"
+        fi
+    # If not all Rmd files are mentioned in toc, a file called rmd_not_in_toc.md
+    # was created. We now capture the content of this file which will be used to
+    # create a comment on an issue:
+    - name: Get rmd_not_in_toc content
+      if: steps.check_file.outputs.exists == 'true'
+      id: get_content
+      run: |
+        CONTENT=$(cat my_issues.md)
+        echo "::set-output name=content::$CONTENT"
+    - name: Create comment on issue
+      if: steps.check_file.outputs.exists == 'true'
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script:  |
+          const { data: issues } = await github.issues.listForRepo({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'open',
+          });
+    
+          const targetIssue = issues.find(issue => issue.title === 'Fehlende Rmd Dateien in toc');
+    
+          if (targetIssue) {
+            const content = `${{ steps.get_content.outputs.content }}`;
+            await github.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: targetIssue.number,
+              body: content,
+            });
+            console.log(`Added comment to issue ${targetIssue.number}`);
+          }
+          else {
+            console.log('Issue with title "missing files" not found');
+          }
     # Build the book
     - name: Build the book
       shell: bash -el {0}
