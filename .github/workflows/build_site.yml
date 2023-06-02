@@ -33,6 +33,7 @@ jobs:
       run: |
         conda activate rtraining
         Rscript rmd2myst.R
+        Rscript rmd_download.R
     # check if all Rmd files are mentioned in toc
     - name: Check if rmd_not_in_toc.md exists
       id: check_file
