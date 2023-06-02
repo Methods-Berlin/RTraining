@@ -151,29 +151,24 @@ Wichtig: Text und Code darf in `details` nicht kombiniert werden!
 ### Details - code-Block mit eval = FALSE
 
 In Rmarkdown-Style:
-
-
-``` r
-:tags: [hide-cell]
-
+<details>
+<pre>
+<code>
 # nicht ausgeführter Code
 print(3)
-```
-
-
+</code>
+</pre>
+</details>
 
 In quarto-Style:
+<details>
+<pre>
+<code>
 
-
-``` r
-:tags: [hide-cell]
-
-
-# nicht ausgeführter Code
 print(3)
-```
-
-
+</code>
+</pre>
+</details>
 
 ### Details - code-Block mit echo = FALSE
 

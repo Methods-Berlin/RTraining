@@ -28,23 +28,18 @@ plot(c(1,2,3,4))
 
 ## Zweites Thema
 
-
-
-```{code-cell} r
-:tags: [hide-cell]
-
+<details>
+<pre>
+<code>
 dat <- data.frame("Spalte 1" = c(4,3,2,1), "Spalte 2" = c(5,6,7,8))
 plot(dat)
-```
-
-
+</code>
+</pre>
+</details> 
 
 ```{code-cell} r
 :tags: [remove-cell]
 dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
 plot(dat)
 ```
-
-
-
 
