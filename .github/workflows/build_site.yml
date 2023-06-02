@@ -55,7 +55,8 @@ jobs:
     - name: Create comment on issue
       if: steps.check_file.outputs.exists == 'true'
       uses: JasonEtco/create-an-issue@v2
-      env:  github-token: ${{ secrets.GITHUB_TOKEN }}
+      env:  
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         filename: rmd_not_in_toc.md
         update_existing: true
