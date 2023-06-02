@@ -3,6 +3,48 @@
 
 library(stringr)
 
+#' file_in_toc
+#' 
+#' Überprüft, ob jede Rmd - Datei auch in toc vorkommt. Wenn nicht, dann
+#' wird eine Datei (rmd_not_in_toc.md) erstellt, in der alle Rmd - Dateien,
+#' die nicht im toc sind, aufgeführt werden. Diese kann dann für das Erstellen
+#' eines issues verwendet werden.
+#' 
+#' @param Rmd_file_names Namen der Rmd-Dateien
+#' @param toc_file_name Name der toc-datei
+#' @return nichts
+file_in_toc <- function(Rmd_file_names, toc_file_name = "_toc.yml"){
+  
+  # .Rmd entfernen
+  Rmd_file_names <- gsub(x = Rmd_file_names, 
+                         pattern = ".Rmd",
+                         replacement = "")
+  
+  # Einlesen der toc Datei
+  toc <- file(toc_file_name)
+  toc_lines <- paste0(readLines(toc), collapse = "\n")
+  close(toc)
+  
+  issue_file <- c()
+  
+  for(Rmd_file_name in Rmd_file_names){
+    if(!grepl(Rmd_file_name, toc_lines)){
+      issue_file <- c(issue_file, 
+                      paste0("- [ ] ", Rmd_file_name))
+    }
+  }
+  
+  if(length(issue_file) != 0){
+    issue_file <- paste0(
+      "The following Rmarkdown-files have not been found in _toc.yml:\n\n",
+        paste0(issue_file, collapse = "\n")
+      )
+    write_file <- file("rmd_not_in_toc.md")
+    writeLines(text = issue_file, con = write_file)
+    close(write_file)
+  }
+}
+
 #' replace_tags 
 #' 
 #' Ersetzt rmd und quarto tags (z.B. eval = FALSE) mit den passenden myst - tags. Siehe
@@ -260,6 +302,10 @@ translate_files <- function(source_folder = "Aufgaben_rmd",
   datei_namen <- list.files(path = source_folder, 
                             pattern = ".Rmd$",
                             full.names = FALSE)
+  
+  file_in_toc(Rmd_file_names = datei_namen, 
+              toc_file_name = "_toc.yml")
+  
   lapply(datei_namen, 
          rmd2myst, 
          source_folder = source_folder,
