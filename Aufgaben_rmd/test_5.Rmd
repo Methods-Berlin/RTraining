@@ -17,7 +17,7 @@ plot(c(1,2,3,4))
 ## Zweites Thema
 
 <details>
-```{r}
+```{r eval=FALSE}
 dat <- data.frame("Spalte 1" = c(4,3,2,1), "Spalte 2" = c(5,6,7,8))
 plot(dat)
 ```
@@ -27,7 +27,4 @@ plot(dat)
 dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
 plot(dat)
 ```
-
-
-
 

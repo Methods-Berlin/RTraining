@@ -1,3 +1,6 @@
 _build/
 .Rproj.user
+*.md
+!intro.md
+.Rhistory
 .DS_Store
