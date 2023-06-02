@@ -176,7 +176,7 @@ replace_code <- function(x){
                               stringr::str_split_fixed(tag, pattern = ":", n = 2)
             )
           # remove qmd tag:
-          x[j] <- ""
+          x <- x[-j]
         }
       }
       
