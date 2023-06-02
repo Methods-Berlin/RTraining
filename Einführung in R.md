@@ -1,18 +1,28 @@
 ---
-title: "Einführung in R Aufgaben"
-output: html_document
-date: "2023-05-29"
-editor_options: 
-  chunk_output_type: console
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: R
+  language: R
+  name: ir
 ---
 
+
 # Einführung in R
+
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Einführung in R.Rmd download=Einführung in R.Rmd>RMarkdown-Datei herunterladen</a>
+
 
 ## Objekt, Logische Operationen 
 
 1) Erstellen Sie ein Objekt "x" und weisen Sie den Wert 5000 zu. Erstellen Sie einen Objekt "y" und weisen Sie den Wert 8 hoch 4 zu. Überprüfen Sie, ob der Objekt "y" kleiner oder gleich dem Wert "x" ist. 
 
-```{r}
+```{code-cell} r
 
 x <- 5000
 y <- 8^4
@@ -25,7 +35,7 @@ y <= x
 2) Erstellen Sie einen Vektor "a" mit folgenden Zahlen: 3,4,6,7,25 und einen Vektor "b": 4.5,6.5,8.5,5.5,7.5. Multiplizieren Sie den Vektor "a" und mit dem Vektor "b" und addieren Sie einen Wert 2. Speichern Sie das Produkt unter einem Objekt "a_b". Welches Datentyp wird dieses Objekt beinhalten? Überprüfen Sie es. 
 
 
-```{r}
+```{code-cell} r
 
 a <- c(3,4,6,7,25)
 b <- c(4.5,6.5,8.5,5.5,7.5)
@@ -38,7 +48,7 @@ str(a_b)
 
 3) Erstellen Sie einen Vektor "vek_1" mit einer Zahlreihe von 5 bis 30 in Fünferschritten und einen Vektor "vek_2" mit einer Zahlenfolge von 2.5 in 6-facher Ausführung. Subtrahieren Sie den "vek_2" vom "vek_1". Wie könnte die resultierende Zahlreihe alternativ erzeugt werden?
 
-```{r}
+```{code-cell} r
 
 vek_1 <- seq(5,30,5)
 vek_2 <- rep(2.5,6)
@@ -57,7 +67,7 @@ b) Lassen Sie sich den Namen des 4. Schülers ausgeben.
 c) Erstellen Sie nun einen weiteren Faktor "schüler_2" bei dem die Namen in der ursprunglichen Reihenfolge (Anton, Luca, Matteo, Max und Emil) sortiert sind. 
 d) Lassen Sie sich die beiden Faktoren ausgeben.
 
-```{r}
+```{code-cell} r
 
 #a)
 schüler_1 <- factor(c("Anton", "Luca", "Matteo", "Max", "Emil"), ordered = TRUE)
@@ -80,7 +90,7 @@ print(schüler_2) #alternativ auch ohne "print()"
 a) Lassen Sie sich die 1. Zeile ausgeben. 
 b) Lassen Sie sich die 2. Spalte ausgeben.
 
-```{r}
+```{code-cell} r
 
 m_1 <- matrix(data = c(4,7,9,2), nrow = 2, ncol = 2, byrow = TRUE)
 
@@ -97,7 +107,7 @@ a) Lassen Sie sich den Wert in der 1. Zeile und 3. Spalte ausgeben.
 b) Lassen Sie sich den Wert in der 2. Zeile und 3. Spalte ausgeben.
 c) Bennen Sie die Zeilen A1, A2, A3 und die Spalten B1, B2, B3.
 
-```{r}
+```{code-cell} r
 
 m_2 <- matrix(data = c(7,3,0,5,6,1,1,9,11), nrow = 3, byrow = FALSE)
 #a)
@@ -120,7 +130,7 @@ c) Qualifikation: False, False, True, False
 
 Lassen Sie sich aus der Liste den Objekt "Start" ausgeben.
 
-```{r}
+```{code-cell} r
 
 list_wettkampf <- list(Sportler = c("Tim", "Alex", "Finn", "Martin"),
                        Start = c(T,T,T,F),
@@ -135,7 +145,7 @@ list_wettkampf$Start
 
 8) Sie führen eine Studie zur Persönlichkeit und möchten bei 4 Personen Extraversion und Verträglichkeit mithilfe eines Fragebogens erfassen. Schließlich bekommen Sie die Mittelwerte der jeweiligen Skala für jeden Teilnehmer. Die Mittelwerte für Extraversion für die 4 Teilnehmer sind: 3.0, 2.5, 3.0, 3.5 und die Mittelwerte der Verträglichkeit sind: 4.0, 3.5, 4.5, 3.0. Erstellen Sie einen Datensatz "Persönlichkeit" mit 3 Spalten: "Teilnehmer", "E" (Extraversion) und "V" (Verträglichkeit). Lassen Sie sich den Wert für Verstäglichkeit des 2. Teilnehmers ausgeben.    
 
-```{r}
+```{code-cell} r
 
 Teilnehmer <- c(1,2,3,4)
 E <- c(3.0, 2.5, 3.0, 3.5)
@@ -150,7 +160,7 @@ Persönlichkeit[2,3]
 
 9) Wandeln Sie die Wettkampfsliste aus der vorherigen Aufgabe in einen Datensatz. 
 
-```{r}
+```{code-cell} r
 
 data.frame(list_wettkampf)
 
