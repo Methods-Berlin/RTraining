@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: Einführung in R
+- file: Einfuehrung in R
 - file: Aufgaben_hinzufuegen
 - file: test_1
 - file: test_2
