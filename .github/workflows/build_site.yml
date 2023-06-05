@@ -43,13 +43,16 @@ jobs:
       run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
+          git add . # add created files, including those in the Rmd_ohne_Loesungen folder
+          git commit -m "adding created files"
           git fetch                         # fetch branches
           git checkout $TARGET_BRANCH       # checkout to your branch
-          git checkout main -- $SRC_FOLDER
+          git checkout main -- $SRC_FOLDER  # get the Rmd_ohne_Loesungen folder
           git add .
           git commit -m "updating rmd without solutions" --allow-empty
           git push origin $TARGET_BRANCH # push to remote branch
           git checkout main
+          rm -rf $SRC_FOLDER # remove Rmd_ohne_Loesungen folder to avoid issues with building the website
     # check if all Rmd files are mentioned in toc
     - name: Check if rmd_not_in_toc.md exists
       id: check_file
