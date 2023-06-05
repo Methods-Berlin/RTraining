@@ -38,7 +38,7 @@ jobs:
      # adapted from https://stackoverflow.com/questions/69577518/github-action-to-copy-specific-folders-from-one-branch-to-another-in-the-same-re
     - name: copy rmd without solutions
       env:
-          SRC_FOLDER: 'Rmd_ohne_Loesung'
+          SRC_FOLDER: 'Rmd_ohne_Loesungen'
           TARGET_BRANCH: 'Rmd_ohne_Loesung'
       run: |
           git config --global user.name 'GitHub Action'
