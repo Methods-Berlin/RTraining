@@ -222,7 +222,7 @@ add_download_button <- function(file_name_rmd, x){
   location <- paste0("https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/", 
                      file_name_rmd)
   
-  link <- paste0("<a href=",location," download=",file_name_rmd,">RMarkdown-Datei herunterladen</a>")
+  link <- paste0("<a href=",location," download=",file_name_rmd,">RMarkdown-Datei mit Lösungen herunterladen</a>")
   
   for(i in 1:length(x)){
     
@@ -235,6 +235,33 @@ add_download_button <- function(file_name_rmd, x){
   
   return(x)
 }
+
+#' add_download_ohne_loesung
+#' 
+#' Fügt einen download-link hinzu (aktuell noch kein Button)
+#' @param file_name_rmd z.B. Uebung.Rmd
+#' @param x text
+#' @return x
+add_download_ohne_loesung <- function(file_name_rmd, x){
+  
+  location <- paste0("https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Rmd_ohne_Loesungen/", 
+                     file_name_rmd)
+  
+  link <- paste0("<a href=",location," download=",file_name_rmd,">RMarkdown-Datei ohne Lösungen herunterladen</a>")
+  
+  for(i in 1:length(x)){
+    
+    if(grepl("# ", x[i])){
+      x[i] <- paste0(x[i], "\n\n", link, "\n")
+      break
+    }
+    
+  }
+  
+  return(x)
+}
+
+
 
 #' rmd2myst
 #' @param file_name Name der Rmd Datei. Diese muss sich im aktuellen working directory befinden
@@ -288,6 +315,8 @@ kernelspec:
   # Download-Button hinzufügen
   x <- add_download_button(file_name_rmd = file_name, 
                            x = x)
+  x <- add_download_ohne_loesung(file_name_rmd = file_name, 
+                                    x = x)
   
   # Ersetzen der code-chunks
   
