@@ -1,0 +1,58 @@
+---
+title: "test"
+output: html_document
+date: "2023-05-12"
+---
+
+# Test Dokument
+
+## Erstes Thema 
+
+
+<details>
+Dies ist ein versteckter Textbaustein.
+</details> 
+
+### Unterthema 
+
+- Liste
+- Liste
+
+Gleichung: $e^{i\pi} = -1$
+
+1. abc
+2. def
+3. ghi
+
+#### Unterunterthema
+
+- Liste
+- Liste
+
+Gleichung: $e^{i\pi} = -1$
+
+1. abc
+2. def
+3. ghi
+
+## Zweites Thema
+
+<details>
+```{r}
+7*3
+```
+</details> 
+
+```{r echo=FALSE}
+dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
+plot(dat)
+```
+
+```{r eval=FALSE}
+17+34
+```
+
+
+
+
+
