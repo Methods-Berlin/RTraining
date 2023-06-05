@@ -13,21 +13,13 @@ kernelspec:
 ---
 
 
-# R Markdown
+# Testdokument
 
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/test_1.Rmd download=test_1.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a>
 
 
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Rmd_ohne_Loesungen/test_1.Rmd download=test_1.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{code-cell} r
-summary(cars)
-```
 
 ## Including Plots
 
@@ -37,17 +29,99 @@ You can also embed plots, for example:
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Thema
+
+- Liste
+- Liste
+- Liste
+
+Gleichung: $e^{i\pi} = -1$
+
+1. abc
+2. def
+3. ghi
 
 
 ```{code-cell} r
-plot(pressure)
+2+4
 ```
 
-```{code-cell} r
-plot(pressure)
-```
 
 ```{code-cell} r
-plot(pressure)
+data <- cars[1:4, ]
+knitr::kable(data, caption = "Tabelle")
 ```
+
+<details>
+Dies ist ein versteckter Textbaustein.
+</details> 
+
+### Unterthema 
+
+- Liste
+- Liste
+
+Gleichung: $e^{i\pi} = -1$
+
+1. abc
+2. def
+3. ghi
+
+#### Unterunterthema
+
+- Liste
+- Liste
+
+Gleichung: $e^{i\pi} = -1$
+
+1. abc
+2. def
+3. ghi
+
+## Zweites Thema
+
+
+
+```{code-cell} r
+:tags: [hide-cell]
+
+7*3
+```
+
+
+
+```{code-cell} r
+:tags: [remove-input]
+dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
+plot(dat)
+```
+
+``` r
+17+34
+```
+## Erstes Thema
+
+``` r
+
+plot(c(1,2,3,4))
+```
+
+
+## Zweites Thema
+
+<details>
+<pre>
+<code>
+dat <- data.frame("Spalte 1" = c(4,3,2,1), "Spalte 2" = c(5,6,7,8))
+plot(dat)
+</code>
+</pre>
+</details> 
+
+```{code-cell} r
+:tags: [remove-cell]
+dat <- data.frame("Spalte 1" = c(1,2,3,4), "Spalte 2" = c(5,6,7,8))
+plot(dat)
+```
+
+
