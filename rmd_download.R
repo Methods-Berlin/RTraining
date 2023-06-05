@@ -1,6 +1,8 @@
 # Dieses R-Script entfernt automatisch alle R Chunks mit dem Label "Loesung", sodass die Aufgaben ohne Lösungen 
 # heruntergeladen werden können.
 
+library(stringr)
+
 # Damit die Code Chunks, die zur Lösung gehören erkannt werden, müssen diese mit einem html-Kommentar gekennzeichnet werden.
 # Die Kommentar sollten forgendermaßen aussehen: 
 
