@@ -15,7 +15,10 @@ kernelspec:
 
 # Test Dokument 2
 
-<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/test_5.Rmd download=test_5.Rmd>RMarkdown-Datei herunterladen</a>
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/test_5.Rmd download=test_5.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a>
+
+
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Rmd_ohne_Loesungen/test_5.Rmd download=test_5.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
 ## Erstes Thema

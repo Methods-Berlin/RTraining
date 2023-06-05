@@ -15,7 +15,10 @@ kernelspec:
 
 # Einführung in R
 
-<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei herunterladen</a>
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a>
+
+
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Rmd_ohne_Loesungen/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
 ## Objekt, Logische Operationen 
@@ -28,6 +31,7 @@ kernelspec:
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -41,6 +45,7 @@ y <= x
 ```
 
 
+<!-- loesung: ende-->
 
 ## Vektor, Datentypen, Aritmetische Opertionen  
 
@@ -52,6 +57,7 @@ y <= x
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -66,6 +72,7 @@ str(a_b)
 ```
 
 
+<!-- loesung: ende-->
 
 ## Zahlenfolgen; seq() & rep()
 
@@ -77,6 +84,7 @@ str(a_b)
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -91,6 +99,7 @@ seq(2.5,27.5,5)
 ```
 
 
+<!-- loesung: ende-->
 
 ## Speziallfall Faktor, Indexieren 
 
@@ -107,6 +116,7 @@ d) Lassen Sie sich die beiden Faktoren ausgeben.
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -129,6 +139,7 @@ print(schüler_2) #alternativ auch ohne "print()"
 ```
 
 
+<!-- loesung: ende-->
 
 ## Matrizen 
 
@@ -142,6 +153,7 @@ b) Lassen Sie sich die 2. Spalte ausgeben.
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -158,7 +170,7 @@ m_1[ , 2]
 ```
 
 
-
+<!-- loesung: ende-->
 
 6) Erstellen Sie eine Matrix "m_2" mit den Zahlen 3 Zeilen und 3 Reihen mit den Zahlen 7,3,0,5,6,1,1,9,11 die spaltenweise eingetragen werden. 
 a) Lassen Sie sich den Wert in der 1. Zeile und 3. Spalte ausgeben. 
@@ -171,6 +183,7 @@ c) Bennen Sie die Zeilen A1, A2, A3 und die Spalten B1, B2, B3.
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -189,6 +202,7 @@ colnames(m_2) <- c("B1", "B2", "B3")
 ```
 
 
+<!-- loesung: ende-->
 
 ## Liste
 
@@ -206,6 +220,7 @@ Lassen Sie sich aus der Liste den Objekt "Start" ausgeben.
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -222,6 +237,7 @@ list_wettkampf$Start
 ```
 
 
+<!-- loesung: ende-->
 
 ## Dataframe 
 
@@ -233,6 +249,7 @@ list_wettkampf$Start
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -250,7 +267,7 @@ Persönlichkeit[2,3]
 ```
 
 
-
+<!-- loesung: ende-->
 
 9) Wandeln Sie die Wettkampfsliste aus der vorherigen Aufgabe in einen Datensatz. 
 
@@ -260,6 +277,7 @@ Persönlichkeit[2,3]
 
 ```
 
+<!-- loesung: start-->
 
 
 ```{code-cell} r
@@ -271,4 +289,4 @@ data.frame(list_wettkampf)
 ```
 
 
-
+<!-- loesung: ende-->

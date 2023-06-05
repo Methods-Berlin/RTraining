@@ -15,7 +15,10 @@ kernelspec:
 
 # R Markdown
 
-<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/test_1.Rmd download=test_1.Rmd>RMarkdown-Datei herunterladen</a>
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/test_1.Rmd download=test_1.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a>
+
+
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Rmd_ohne_Loesungen/test_1.Rmd download=test_1.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.

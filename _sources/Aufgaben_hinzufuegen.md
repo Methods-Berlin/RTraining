@@ -20,7 +20,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Aufgaben hinzufügen
 
-<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd download=Aufgaben_hinzufuegen.Rmd>RMarkdown-Datei herunterladen</a>
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Aufgaben_hinzufuegen.Rmd download=Aufgaben_hinzufuegen.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a>
+
+
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Rmd_ohne_Loesungen/Aufgaben_hinzufuegen.Rmd download=Aufgaben_hinzufuegen.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
 Aufgaben der RTraining-Plattform sind in RMarkdown geschrieben und werden 
