@@ -47,7 +47,7 @@ jobs:
           git checkout $TARGET_BRANCH       # checkout to your branch
           git checkout main -- $SRC_FOLDER
           git add .
-          gti commit -m "updating rmd without solutions" --allow-empty
+          git commit -m "updating rmd without solutions" --allow-empty
           git push origin $TARGET_BRANCH # push to remote branch
           git checkout main
     # check if all Rmd files are mentioned in toc
