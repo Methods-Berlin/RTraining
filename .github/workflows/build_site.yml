@@ -27,12 +27,11 @@ jobs:
       run: |
         conda activate rtraining
         Rscript -e "IRkernel::installspec()"
-    # translate Rmd to myst
+    # create Rmd without solutions
     - name: R Kernel
       shell: bash -el {0} # need to restart bash; apparently this may do the trick
       run: |
         conda activate rtraining
-        Rscript rmd2myst.R
         Rscript rmd_download.R
      # copy rmd files without solutions to new branch
      # adapted from https://stackoverflow.com/questions/69577518/github-action-to-copy-specific-folders-from-one-branch-to-another-in-the-same-re
@@ -54,6 +53,13 @@ jobs:
           git checkout main
           rm -r Rmd_ohne_Loesungen/ # remove Rmd_ohne_Loesungen folder to avoid issues with building the website
           ls # list existing files
+    # translate Rmd to myst
+    - name: R Kernel
+      shell: bash -el {0} # need to restart bash; apparently this may do the trick
+      run: |
+        conda activate rtraining
+        Rscript rmd2myst.R
+        ls # list existing files
     # check if all Rmd files are mentioned in toc
     - name: Check if rmd_not_in_toc.md exists
       id: check_file
