@@ -52,7 +52,8 @@ jobs:
           git commit -m "updating rmd without solutions" --allow-empty
           git push origin $TARGET_BRANCH # push to remote branch
           git checkout main
-          rm -rf $SRC_FOLDER # remove Rmd_ohne_Loesungen folder to avoid issues with building the website
+          rm -r Rmd_ohne_Loesungen/ # remove Rmd_ohne_Loesungen folder to avoid issues with building the website
+          ls # list existing files
     # check if all Rmd files are mentioned in toc
     - name: Check if rmd_not_in_toc.md exists
       id: check_file
