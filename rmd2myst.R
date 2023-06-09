@@ -175,8 +175,9 @@ replace_code <- function(x){
             tags_qmd <- rbind(tags_qmd,
                               stringr::str_split_fixed(tag, pattern = ":", n = 2)
             )
-          # remove qmd tag:
-          x <- x[-j]
+          # store empty line
+          empty_lines <- c()
+          empty_lines <- cbind(empty_lines, j)
         }
       }
       
@@ -208,6 +209,7 @@ replace_code <- function(x){
       }
     }
   }
+  x <- x[-empty_lines]
   return(x)
 }
 
