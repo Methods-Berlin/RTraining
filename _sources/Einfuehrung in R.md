@@ -18,7 +18,7 @@ kernelspec:
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a>
 
 
-<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Rmd_ohne_Loesungen/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
+<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
 ## Objekt, Logische Operationen 
