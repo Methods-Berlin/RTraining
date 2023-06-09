@@ -289,7 +289,7 @@ add_download_button <- function(file_name_rmd, x){
 #' @return x
 add_download_ohne_loesung <- function(file_name_rmd, x){
   
-  location <- paste0("https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/", 
+  location <- paste0("https://github.com/Methods-Berlin/RTraining/tree/Rmd_ohne_Loesung/Rmd_ohne_Loesungen/", 
                      file_name_rmd)
   
   link <- paste0("<a href=",location," download=",file_name_rmd,">RMarkdown-Datei ohne Lösungen herunterladen</a>")
