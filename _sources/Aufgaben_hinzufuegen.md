@@ -89,7 +89,6 @@ print(3)
 
 In quarto-Style:
 ``` r
-
 # nicht ausgeführter Code
 print(3)
 ```
@@ -106,7 +105,6 @@ print(3)
 In quarto-Style:
 ```{code-cell} r
 :tags: [remove-input]
-
 # versteckter input, angezeigter output
 print(3)
 ```
@@ -123,7 +121,6 @@ print(3)
 In quarto-Style:
 ```{code-cell} r
 :tags: [remove-cell]
-
 # versteckter input, versteckter output
 print(3)
 ```
@@ -167,7 +164,6 @@ In quarto-Style:
 <details>
 <pre>
 <code>
-
 print(3)
 </code>
 </pre>
@@ -194,7 +190,6 @@ In quarto-Style:
 ```{code-cell} r
 :tags: [remove-input]
 :tags: [hide-cell]
-
 
 # nicht ausgeführter Code
 print(3)

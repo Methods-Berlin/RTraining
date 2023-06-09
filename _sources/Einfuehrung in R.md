@@ -37,7 +37,6 @@ Erstelle ein Objekt "x" und weise den Wert 5000 zu. Erstelle ein Objekt "y" und 
 ```{code-cell} r
 :tags: [hide-cell]
 
-
 x <- 5000
 y <- 8^4
 y <= x
@@ -62,7 +61,6 @@ Erstelle einen Vektor "a" mit folgenden Zahlen: 3,4,6,7,25 und einen Vektor "b":
 
 ```{code-cell} r
 :tags: [hide-cell]
-
 
 a <- c(3,4,6,7,25)
 b <- c(4.5,6.5,8.5,5.5,7.5)
@@ -89,7 +87,6 @@ Erstelle einen Vektor "vek_1" mit einer Zahlreihe von 5 bis 30 in Fünferschritt
 
 ```{code-cell} r
 :tags: [hide-cell]
-
 
 vek_1 <- seq(5,30,5)
 vek_2 <- rep(2.5,6)
@@ -121,7 +118,6 @@ d) Lass dir die beiden Faktoren ausgeben.
 
 ```{code-cell} r
 :tags: [hide-cell]
-
 
 #a)
 schüler_1 <- factor(c("Anton", "Luca", "Matteo", "Max", "Emil"), ordered = TRUE)
@@ -159,7 +155,6 @@ b) Lass dir die 2. Spalte ausgeben.
 ```{code-cell} r
 :tags: [hide-cell]
 
-
 m_1 <- matrix(data = c(4,7,9,2), nrow = 2, ncol = 2, byrow = TRUE)
 
 #a) 
@@ -188,7 +183,6 @@ c) Benenne die Zeilen A1, A2, A3 und die Spalten B1, B2, B3.
 
 ```{code-cell} r
 :tags: [hide-cell]
-
 
 m_2 <- matrix(data = c(7,3,0,5,6,1,1,9,11), nrow = 3, byrow = FALSE)
 #a)
@@ -226,7 +220,6 @@ Lass dir aus der Liste das Objekt "Start" ausgeben.
 ```{code-cell} r
 :tags: [hide-cell]
 
-
 list_wettkampf <- list(Sportler = c("Tim", "Alex", "Finn", "Martin"),
                        Start = c(T,T,T,F),
                        Platz = c(2,3,1,NA),
@@ -255,7 +248,6 @@ Du führst eine Studie zur Persönlichkeit und möchtest bei 4 Personen Extraver
 ```{code-cell} r
 :tags: [hide-cell]
 
-
 Teilnehmer <- c(1,2,3,4)
 E <- c(3.0, 2.5, 3.0, 3.5)
 V <- c(4.0, 3.5, 4.5, 3.0)
@@ -282,7 +274,6 @@ Wandle die Wettkampfsliste aus der vorherigen Aufgabe in einen Datensatz.
 
 ```{code-cell} r
 :tags: [hide-cell]
-
 
 data.frame(list_wettkampf)
 

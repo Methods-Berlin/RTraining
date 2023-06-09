@@ -102,7 +102,6 @@ plot(dat)
 ## Erstes Thema
 
 ``` r
-
 plot(c(1,2,3,4))
 ```
 
