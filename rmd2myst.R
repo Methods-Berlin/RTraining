@@ -40,8 +40,8 @@ file_in_toc <- function(Rmd_file_names, toc_file_name = "_toc.yml"){
 title: Fehlende RMarkdown-Dateien in _toc.yml
 ---
 The following Rmarkdown-files have not been found in _toc.yml:\n\n",
-        paste0(issue_file, collapse = "\n")
-      )
+      paste0(issue_file, collapse = "\n")
+    )
     write_file <- file("rmd_not_in_toc.md")
     writeLines(text = issue_file, con = write_file)
     close(write_file)
@@ -116,20 +116,20 @@ replace_details <- function(x){
               x[code_start] <- paste0("<pre>\n<code>")
               x[code_end] <- paste0("</code>\n</pre>")
             }else{
-            if(code_start > start+1)
-              cutoff <- c(cutoff, x[(start+1):code_start])
-            if(code_end < end-1)
-              cutoff <- c(cutoff, x[code_end:(end-1)])
-            if(length(cutoff) > 0)
-              warning("Die folgenden Text-Blöcke werden entfernt, da",
-                      "<details> aktuell nur code oder text, aber nicht beides ",
-                      "enthalten darf:",
-                      cutoff)
-            # details ersetzen
-            x[start] <- "\n"
-            x[end] <- "\n"
-            # tag einfügen
-            x[code_start] <- paste0(x[code_start], "\n:tags: [hide-cell]\n")
+              if(code_start > start+1)
+                cutoff <- c(cutoff, x[(start+1):code_start])
+              if(code_end < end-1)
+                cutoff <- c(cutoff, x[code_end:(end-1)])
+              if(length(cutoff) > 0)
+                warning("Die folgenden Text-Blöcke werden entfernt, da",
+                        "<details> aktuell nur code oder text, aber nicht beides ",
+                        "enthalten darf:",
+                        cutoff)
+              # details ersetzen
+              x[start] <- "\n"
+              x[end] <- "\n"
+              # tag einfügen
+              x[code_start] <- paste0(x[code_start], "\n:tags: [hide-cell]\n")
             }
           }
           break
@@ -147,6 +147,7 @@ replace_details <- function(x){
 #' @param x text
 #' @return x 
 replace_code <- function(x){
+  
   for(i in 1:length(x)){
     if(grepl(pattern = "```\\{ *r", x = x[i])){
       # code starts
@@ -160,7 +161,6 @@ replace_code <- function(x){
       
       # search for end:
       tags_qmd <- c()
-      empty_lines <- c()
       
       for(j in (i+1):length(x)){
         if(grepl(pattern = "```", x = x[j]))
@@ -177,8 +177,7 @@ replace_code <- function(x){
             tags_qmd <- rbind(tags_qmd,
                               stringr::str_split_fixed(tag, pattern = ":", n = 2)
             )
-          # store empty line
-          empty_lines <- cbind(empty_lines, j)
+          x[j] <- "" # remove tag
         }
       }
       
@@ -210,8 +209,51 @@ replace_code <- function(x){
       }
     }
   }
-  x <- x[-empty_lines]
+  x <- remove_empty_lines_in_code(x)
   return(x)
+}
+
+#' remove_empty_lines_in_code
+#' 
+#' removes empty lines at the beginning of code blocks
+#' @param x vector with text
+#' @return x
+remove_empty_lines_in_code <- function(x){
+  remove_lines <- c()
+  i <- 1
+  max_it <- length(x)
+  while(i <= max_it){
+    if(grepl(pattern = "^```", x = x[i])){
+      code_start <- i
+      # remove empty lines at beginning
+      j <- i+1
+      while(j <= max_it){
+        if(x[j] != ""){
+          break
+        }else{
+          remove_lines <- c(remove_lines, j)
+        }
+        j <- j+1
+      }
+      if (j > max_it)
+        stop("Could not find an end to the code block.")
+      
+      # continue until end of code block
+      while(i <= max_it){
+        i <- i+1
+        if(grepl(pattern = "```", x = x[i]))
+          break
+      }
+      if (i > max_it)
+        stop("Could not find an end to the code block.")
+    }
+    i <- i+1
+  }
+  
+  if(length(remove_lines) > 0)
+    x <- x[-remove_lines]
+  return(x)
+  
 }
 
 #' add_download_button
@@ -319,7 +361,7 @@ kernelspec:
   x <- add_download_button(file_name_rmd = file_name, 
                            x = x)
   x <- add_download_ohne_loesung(file_name_rmd = file_name, 
-                                    x = x)
+                                 x = x)
   
   # Ersetzen der code-chunks
   
