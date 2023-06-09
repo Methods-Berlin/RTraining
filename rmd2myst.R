@@ -160,6 +160,8 @@ replace_code <- function(x){
       
       # search for end:
       tags_qmd <- c()
+      empty_lines <- c()
+      
       for(j in (i+1):length(x)){
         if(grepl(pattern = "```", x = x[j]))
           break # code ends
@@ -176,7 +178,6 @@ replace_code <- function(x){
                               stringr::str_split_fixed(tag, pattern = ":", n = 2)
             )
           # store empty line
-          empty_lines <- c()
           empty_lines <- cbind(empty_lines, j)
         }
       }
