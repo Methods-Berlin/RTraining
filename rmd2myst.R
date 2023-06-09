@@ -147,6 +147,7 @@ replace_details <- function(x){
 #' @param x text
 #' @return x 
 replace_code <- function(x){
+  
   for(i in 1:length(x)){
     if(grepl(pattern = "```\\{ *r", x = x[i])){
       # code starts
@@ -160,7 +161,6 @@ replace_code <- function(x){
       
       # search for end:
       tags_qmd <- c()
-      empty_lines <- c()
       
       for(j in (i+1):length(x)){
         if(grepl(pattern = "```", x = x[j]))
@@ -177,8 +177,7 @@ replace_code <- function(x){
             tags_qmd <- rbind(tags_qmd,
                               stringr::str_split_fixed(tag, pattern = ":", n = 2)
             )
-          # store empty line
-          empty_lines <- cbind(empty_lines, j)
+          x[j] <- "" # remove tag
         }
       }
       
@@ -210,10 +209,37 @@ replace_code <- function(x){
       }
     }
   }
-  x <- x[-empty_lines]
+  x <- remove_empty_lines_in_code(x)
   return(x)
 }
 
+remove_empty_lines_in_code <- function(x){
+  remove_lines <- c()
+  i <- 1
+  max_it <- length(x)
+  while(i <= max_it){
+   if(grepl(pattern = "^```", x = x[i]){
+      # code block starts
+      while(x[i] == ""){
+        # code block starts with empty lines
+        remove_lines <- c(remove_lines, i)
+        i <- i+1
+        next
+       }
+       # found first non-empty line, so now we continue
+       # until the code block ends
+       while(!grepl(pattern = "^```", x = x[i+1])
+             i <- i+1
+       i <- i+1
+       next
+     }
+     # not a code block
+     i <- i+1
+  }
+  x <- x[-remove_lines]
+  return(x)
+}
+                           
 #' add_download_button
 #' 
 #' Fügt einen download-link hinzu (aktuell noch kein Button)
