@@ -60,6 +60,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Aufgaben_hinzufuegen';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -430,6 +432,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details-code-block-mit-echo-false">Details - code-Block mit echo = FALSE</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgaben-inhalt">Aufgaben - Inhalt</a></li>
 </ul>
             </nav>
         </div>
@@ -451,7 +454,8 @@ in myst-Markdown übersetzt. myst-Markdown ist die von JupyterBook unterstützte
 Markdown Version. Neue Aufgaben werden hinzugefügt, indem diese als Rmd-Dateien
 im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei
 (z.B. bei “neue_Aufgabe.Rmd” ist der Name “neue_Aufgabe”) im Dokument _toc.yml
-hinzugefügt werden.</p>
+hinzugefügt werden. Der Name der Datei darf keine Umlaute enthalten, z.B. statt “Einführung in R”, muss
+die Datei “Einfuerung in R” bennant werden.</p>
 <p>Wenn die Aufgabe R-Pakete nutzt, muss zusätzlich überprüft werden, ob dieses
 bereits installiert wird. Alle bisher installierten Pakete werden im Dokument
 <a class="reference external" href="https://github.com/Methods-Berlin/RTraining/blob/main/environment.yml">environment.yml</a>
@@ -631,6 +635,48 @@ print(3)
 </div>
 </section>
 </section>
+<section id="aufgaben-inhalt">
+<h2>Aufgaben - Inhalt<a class="headerlink" href="#aufgaben-inhalt" title="Permalink to this headline">#</a></h2>
+<p>Die Aufgaben beziehen sich auf die Inhalte der R-Lernplattform und werden entsprechend unterteilt und
+benannt, z.B. “Einführung in R”. Es gibt keine explizite Anzahl an Aufgaben, die für jeden Abschnitt erstellt werden, sondern
+es wird sich an den Inhalt orientiert. Pro Themenbereich werden 1-2 Aufgaben erstellt mit dem Ziel, das Wissen, das in dem
+Abschnitt vermittelt wird, weitestgehend abzufragen. Die Aufgaben können auch mehrere Themenbereiche gleichzeitig abfragen
+und können (bzw. sollen) in Ihrer Schwierigkeit variieren.</p>
+<p>Jede Aufgabe besteht aus drei Teilen: 1) Themenbereich, 2) Aufgabe in schriftlicher Form und 3) Lösung als code-Block.</p>
+<ol class="arabic simple">
+<li><p>Der Themenbereich dient als die Unterschrift, z.B. “Objekt, Logische Operationen” und wird mit 2 oder mehr “#” prefixiert.
+Nur die Überschrift bzw. der Name des Aufgabenabschnitts (z.B. “Einführung in R”) wird mit einem einzelnen “#” prefixiert.</p></li>
+<li><p>Die Aufgaben werden per “du” geschrieben. Die Aufgaben werden nicht nummeriert.</p></li>
+<li><p>Der Anfang und das Ende der Lösung wird mit <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">start--&gt;</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">ende--&gt;</span></code> markiert. Z.B.:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">start--&gt;</span></code></p>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">5000</span>
+<span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">8</span><span class="o">^</span><span class="m">4</span>
+<span class="n">y</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">TRUE</div></div>
+</details>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">ende--&gt;</span></code></p>
+<p>Die Tags <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">start--&gt;</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">ende--&gt;</span></code> müssen immer in einer eigenen Zeile stehen. Folgendes
+ist nicht erlaubt:</p>
+<p>“Berechne 123*456 in R. <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">start--&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">123*456</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">ende--&gt;</span></code>”.</p>
+<p>Korrekt wäre:</p>
+<p>“Berechne 123*456 in R.
+<code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">start--&gt;</span></code>
+<code class="docutils literal notranslate"><span class="pre">123*456</span></code>
+<code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">loesung:</span> <span class="pre">ende--&gt;</span></code>”.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -712,6 +758,7 @@ print(3)
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details-code-block-mit-echo-false">Details - code-Block mit echo = FALSE</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgaben-inhalt">Aufgaben - Inhalt</a></li>
 </ul>
   </nav></div>
 

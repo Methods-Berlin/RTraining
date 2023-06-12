@@ -32,7 +32,8 @@ in myst-Markdown übersetzt. myst-Markdown ist die von JupyterBook unterstützte
 Markdown Version. Neue Aufgaben werden hinzugefügt, indem diese als Rmd-Dateien
 im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei 
 (z.B. bei "neue_Aufgabe.Rmd" ist der Name "neue_Aufgabe") im Dokument _toc.yml
-hinzugefügt werden.
+hinzugefügt werden. Der Name der Datei darf keine Umlaute enthalten, z.B. statt "Einführung in R", muss
+die Datei "Einfuerung in R" bennant werden. 
 
 Wenn die Aufgabe R-Pakete nutzt, muss zusätzlich überprüft werden, ob dieses 
 bereits installiert wird. Alle bisher installierten Pakete werden im Dokument
@@ -196,3 +197,44 @@ print(3)
 ```
 
 
+
+
+## Aufgaben - Inhalt 
+
+Die Aufgaben beziehen sich auf die Inhalte der R-Lernplattform und werden entsprechend unterteilt und 
+benannt, z.B. "Einführung in R". Es gibt keine explizite Anzahl an Aufgaben, die für jeden Abschnitt erstellt werden, sondern 
+es wird sich an den Inhalt orientiert. Pro Themenbereich werden 1-2 Aufgaben erstellt mit dem Ziel, das Wissen, das in dem 
+Abschnitt vermittelt wird, weitestgehend abzufragen. Die Aufgaben können auch mehrere Themenbereiche gleichzeitig abfragen 
+und können (bzw. sollen) in Ihrer Schwierigkeit variieren. 
+
+Jede Aufgabe besteht aus drei Teilen: 1) Themenbereich, 2) Aufgabe in schriftlicher Form und 3) Lösung als code-Block. 
+1) Der Themenbereich dient als die Unterschrift, z.B. "Objekt, Logische Operationen" und wird mit 2 oder mehr "#" prefixiert.
+ Nur die Überschrift bzw. der Name des Aufgabenabschnitts (z.B. "Einführung in R") wird mit einem einzelnen "#" prefixiert. 
+2) Die Aufgaben werden per "du" geschrieben. Die Aufgaben werden nicht nummeriert. 
+3) Der Anfang und das Ende der Lösung wird mit `<!-- loesung: start-->` bzw. `<!-- loesung: ende-->` markiert. Z.B.:  
+
+`<!-- loesung: start-->`
+
+
+```{code-cell} r
+:tags: [hide-cell]
+
+x <- 5000
+y <- 8^4
+y <= x
+```
+
+
+`<!-- loesung: ende-->`
+
+Die Tags `<!-- loesung: start-->` bzw. `<!-- loesung: ende-->` müssen immer in einer eigenen Zeile stehen. Folgendes
+ist nicht erlaubt: 
+
+"Berechne 123*456 in R. `<!-- loesung: start-->` `123*456` `<!-- loesung: ende-->`".
+
+Korrekt wäre:
+
+"Berechne 123*456 in R. 
+`<!-- loesung: start-->`
+`123*456`
+`<!-- loesung: ende-->`".
