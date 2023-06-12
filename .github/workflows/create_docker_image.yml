@@ -2,7 +2,9 @@
 name: Docker Image For Dependencies
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      main
   
 jobs:
   push:
@@ -10,17 +12,28 @@ jobs:
     permissions:
       packages: write
       contents: read
-    
+      
     steps:
-    - uses: actions/checkout@v3
-      with:
-       submodules: 'true'
-    - name: Build Docker with Dependencies
-      run: ls && docker build . --file .github/workflows/Dockerfile --tag ghcr.io/methods-berlin/rtraining_dep:latest
-    
-    - name: Log in to registry
-      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
- 
-    - name: Push Package
-      run: docker push ghcr.io/methods-berlin/rtraining_dep:latest
+      - name: Check out code
+        uses: actions/checkout@v3
+        
+      - name: Check if environment changed
+        id: file_changes 
+        run: |
+          if git diff --quiet HEAD origin/main -- environment.yml; then
+            echo "::set-output name=changed::false"
+          else
+            echo "::set-output name=changed::true"
+          fi
+
+      - name: Build Docker with Dependencies
+        run: |
+          if [[ "${{ steps.git-diff.outputs.changed }}" == "true" ]]; then
+            ls && docker build . --file .github/workflows/Dockerfile --tag ghcr.io/methods-berlin/rtraining_dep:latest
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+            docker push ghcr.io/methods-berlin/rtraining_dep:latest
+          else
+            echo "File has not changed. Skipping docker build."
+          fi
+
   
