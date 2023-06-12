@@ -13,12 +13,15 @@ library(stringr)
 #' loesung_entf
 #' 
 #' Entferne Lösungen, falls vorhanden
+#' @param file_name name of the Rmd file
 #' @param x text (Datei)
 #' @return x
 
-loesung_entf <- function(x){
+loesung_entf <- function(file_name, x){
   for(i in 1:length(x)){
-      if(grepl("<!-- *loesung: *start-->", x[i])){
+      if(grepl("<!-- *loesung: *start-->", x[i]) & 
+         !grepl("`<!-- *loesung: *start-->`", x[i]) # ignore code-examples
+         ){
         start <- i
         # suche Ende
         for(j in i:length(x)){
@@ -27,12 +30,16 @@ loesung_entf <- function(x){
             # 
             if(length(end)==0){
               stop("Folgende Lösung wurde nicht mit \"<!-- loesung: ende-->\" beendet:\n",
+                   "\tFile: ",
+                   file_name, "\n",
                    "\tZeile ",
                    start)
             } else {
               start_2 <- str_detect(x[(start+1):end], "<!-- *loesung: *start-->")
               if(any(start_2)){
                 stop("Folgende Lösung wurde nicht mit \"<!-- loesung: ende-->\" beendet:\n",
+                     "\tFile: ",
+                     file_name, "\n",
                      "\tZeile ",
                      start)
               } else {
@@ -59,7 +66,7 @@ rmd_for_download <- function(file_name,
   x <- readLines(dat) # jede Zeile im Dokument wird zu einem Element im Vektor
   close(dat)
   
-  x <- loesung_entf(x)
+  x <- loesung_entf(file_name = file_name, x = x)
   
   cat(x, file = save_as, sep = "\n")
 }
