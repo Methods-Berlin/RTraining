@@ -21,14 +21,8 @@ jobs:
         run: |
           # We check if the environment.yml file changed when compared to main:          
           git fetch                         # fetch branches
-          if git diff --exit-code HEAD origin/main -- environment.yml; then
-            # if there is a change, we update the docker image
-            ls && docker build . --file .github/workflows/Dockerfile --tag ghcr.io/methods-berlin/rtraining_dep:latest
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
-            docker push ghcr.io/methods-berlin/rtraining_dep:latest
+          if [ -n "$(git diff HEAD origin/main -- environment.yml)" ]; then
+              echo "File changed"
           else
-            echo "File has not changed. Skipping docker build."
+              echo "File has not changed. Skipping docker build."
           fi
-  
-
-  
