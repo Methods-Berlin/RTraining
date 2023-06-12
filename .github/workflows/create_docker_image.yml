@@ -20,7 +20,7 @@ jobs:
       - name: Build Docker with Dependencies
         run: |
           # We check if the environment.yml file changed when compared to main:          
-          git pull origin main
+          git fetch                         # fetch branches
           if git diff --exit-code HEAD main -- environment.yml; then
             # if there is a change, we update the docker image
             ls && docker build . --file .github/workflows/Dockerfile --tag ghcr.io/methods-berlin/rtraining_dep:latest
