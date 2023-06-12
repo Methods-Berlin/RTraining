@@ -1,4 +1,4 @@
-name: deploy-book
+name: test-book
 
 # Only run this when the main branch changes
 on:
@@ -33,26 +33,6 @@ jobs:
       run: |
         conda activate rtraining
         Rscript rmd_download.R
-     # copy rmd files without solutions to new branch
-     # adapted from https://stackoverflow.com/questions/69577518/github-action-to-copy-specific-folders-from-one-branch-to-another-in-the-same-re
-    - name: copy rmd without solutions
-      env:
-          SRC_FOLDER: 'Rmd_ohne_Loesungen'
-          TARGET_BRANCH: 'Rmd_ohne_Loesung'
-      run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git add . # add created files, including those in the Rmd_ohne_Loesungen folder
-          git commit -m "adding created files"
-          git fetch                         # fetch branches
-          git checkout $TARGET_BRANCH       # checkout to your branch
-          git checkout main -- $SRC_FOLDER  # get the Rmd_ohne_Loesungen folder
-          git add .
-          git commit -m "updating rmd without solutions" --allow-empty
-          git push origin $TARGET_BRANCH # push to remote branch
-          git checkout main
-          rm -r Rmd_ohne_Loesungen/ # remove Rmd_ohne_Loesungen folder to avoid issues with building the website
-          ls # list existing files
     # translate Rmd to myst
     - name: R Kernel
       shell: bash -el {0} # need to restart bash; apparently this may do the trick
