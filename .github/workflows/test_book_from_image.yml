@@ -1,0 +1,65 @@
+name: test-book-from-image
+
+# Only run this when the main branch changes
+on:
+  workflow_dispatch:
+
+jobs:
+  test-book:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/methods-berlin/rtraining_dep:latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: R Kernel
+      shell: bash -el {0} # need to restart bash; apparently this may do the trick
+      run: |
+        conda activate rtraining
+        Rscript -e "IRkernel::installspec()"
+    # create Rmd without solutions
+    - name: R Kernel
+      shell: bash -el {0} # need to restart bash; apparently this may do the trick
+      run: |
+        conda activate rtraining
+        Rscript rmd_download.R
+    # translate Rmd to myst
+    - name: R Kernel
+      shell: bash -el {0} # need to restart bash; apparently this may do the trick
+      run: |
+        conda activate rtraining
+        Rscript rmd2myst.R
+        ls # list existing files
+    # check if all Rmd files are mentioned in toc
+    - name: Check if rmd_not_in_toc.md exists
+      id: check_file
+      run: |
+        if [ -f "rmd_not_in_toc.md" ]; then
+          echo "::set-output name=exists::true"
+        else
+          echo "::set-output name=exists::false"
+        fi
+    # If not all Rmd files are mentioned in toc, a file called rmd_not_in_toc.md
+    # was created. We now capture the content of this file which will be used to
+    # create a comment on an issue. See https://github.com/marketplace/actions/create-an-issue
+    # for more details
+    - name: Get rmd_not_in_toc content
+      if: steps.check_file.outputs.exists == 'true'
+      id: get_content
+      run: |
+        CONTENT=$(cat rmd_not_in_toc.md)
+        echo "::set-output name=content::$CONTENT"
+    - name: Create comment on issue
+      if: steps.check_file.outputs.exists == 'true'
+      uses: JasonEtco/create-an-issue@v2
+      env:  
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: rmd_not_in_toc.md
+        update_existing: true
+    # Build the book
+    - name: Build the book
+      shell: bash -el {0}
+      run: |
+        conda activate rtraining
+        jupyter-book build .
