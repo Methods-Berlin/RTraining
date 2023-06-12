@@ -20,7 +20,6 @@ jobs:
       - name: Build Docker with Dependencies
         run: |
           # We check if the environment.yml file changed when compared to main:          
-          git fetch
           git pull origin main
           if git diff --exit-code HEAD main -- environment.yml; then
             # if there is a change, we update the docker image
