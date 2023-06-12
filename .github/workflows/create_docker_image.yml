@@ -16,11 +16,11 @@ jobs:
       with:
        submodules: 'true'
     - name: Build Docker with Dependencies
-      run: ls && docker build . --file .github/workflows/Dockerfile --tag ghcr.io/Methods-Berlin/rtraining_dep:latest
+      run: ls && docker build . --file .github/workflows/Dockerfile --tag ghcr.io/methods-berlin/rtraining_dep:latest
     
     - name: Log in to registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
  
     - name: Push Package
-      run: docker push ghcr.io/Methods-Berlin/rtraining_dep:latest
+      run: docker push ghcr.io/methods-berlin/rtraining_dep:latest
   
