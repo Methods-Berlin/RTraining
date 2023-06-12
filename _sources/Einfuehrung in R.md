@@ -18,7 +18,7 @@ kernelspec:
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a>
 
 
-<a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
+<a href=https://github.com/Methods-Berlin/RTraining/tree/Rmd_ohne_Loesung/Rmd_ohne_Loesungen/Einfuehrung in R.Rmd download=Einfuehrung in R.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
 ## Objekt, Logische Operationen 
@@ -46,7 +46,7 @@ y <= x
 
 <!-- loesung: ende-->
 
-## Vektor, Datentypen, Aritmetische Opertionen  
+## Vektor, Datentypen, Arithmetische Operationen
 
 Erstelle einen Vektor "a" mit folgenden Zahlen: 3,4,6,7,25 und einen Vektor "b": 4.5,6.5,8.5,5.5,7.5. Multipliziere den Vektor "a" und mit dem Vektor "b" und addiere den Wert 2. Speichere das Produkt unter einem Objekt "a_b". Welches Datentyp wird dieses Objekt beinhalten? Überprüfe es. 
 
