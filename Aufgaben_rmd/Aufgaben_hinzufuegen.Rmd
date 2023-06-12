@@ -175,7 +175,7 @@ es wird sich an den Inhalt orientiert. Pro Themenbereich werden 1-2 Aufgaben ers
 Jede Aufgabe besteht aus drei Teilen: 1) Themenbereich, 2) Aufgabe in schriftlicher Form und 3) Lösung als code-Block. 
 1) Der Themenbereich dient als die Unterschrift, z.B. "Objekt, Logische Operationen" und wird mit 2 oder mehr "#" prefixiert. Nur die Überschrift bzw. der Name des Aufgabenabschnitts (z.B. "Einführung in R") wird mit einem einzelnen "#" prefixiert. 
 2) Die Aufgaben werden per "du" geschrieben. Die Aufgaben werden nicht nummeriert. 
-3) Der Anfang und das Ende der Lösung wird mit <!-- loesung: start--> bzw. <!-- loesung: ende--> markiert. Z.B.:  
+3) Der Anfang und das Ende der Lösung wird mit `<!-- loesung: start-->` bzw. `<!-- loesung: ende-->` markiert. Z.B.:  
 
 <!-- loesung: start-->
 <details>
