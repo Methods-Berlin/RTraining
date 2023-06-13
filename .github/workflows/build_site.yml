@@ -40,6 +40,7 @@ jobs:
           git commit -m "adding created files"
           git fetch                         # fetch branches
           git checkout $TARGET_BRANCH       # checkout to your branch
+          git rm -r *                       # remove old files
           git checkout main -- $SRC_FOLDER  # get the Rmd_ohne_Loesungen folder
           git add .
           git commit -m "updating rmd without solutions" --allow-empty
