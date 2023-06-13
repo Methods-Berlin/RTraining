@@ -35,6 +35,7 @@ jobs:
       run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
+          git config --global --add safe.directory /__w/RTraining/RTraining
           git add . # add created files, including those in the Rmd_ohne_Loesungen folder
           git commit -m "adding created files"
           git fetch                         # fetch branches
