@@ -9,18 +9,11 @@ on:
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/methods-berlin/rtraining_dep:latest
     steps:
     - uses: actions/checkout@v2
 
-    # Set up conda environment
-    - name: Set up conda environment
-      uses: conda-incubator/setup-miniconda@v2
-      with:
-        activate-environment: rtraining
-        environment-file: environment.yml
-    - name: Initialize conda
-      run: |
-        conda init bash
     # set up R - Kernel
     - name: R Kernel
       shell: bash -el {0} # need to restart bash; apparently this may do the trick
