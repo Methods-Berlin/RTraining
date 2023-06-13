@@ -198,8 +198,11 @@ ist nicht erlaubt:
 Korrekt wäre:
 
 "Berechne 123*456 in R. 
+  
 `<!-- loesung: start-->`
+
 `123*456`
+
 `<!-- loesung: ende-->`".
 
  
