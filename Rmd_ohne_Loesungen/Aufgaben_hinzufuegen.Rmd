@@ -198,6 +198,28 @@ ist nicht erlaubt:
 Korrekt wäre:
 
 "Berechne 123*456 in R. 
+  
 `<!-- loesung: start-->`
+
 `123*456`
+
 `<!-- loesung: ende-->`".
+
+ 
+ ## Checkliste 
+  
+ Diese Checkliste kann zur Selbstüberprüfung verwendet werden: 
+  
+ - R Übungsaufgaben erstellen
+ - Lösungen mit "<!-- loesung: start> Meine Lösung steht hier <!-- loesung: ende-->" markieren
+ - Header level überprüfen: Nur die erste Überschrift darf auf Level 1 sein (# Erste Überschrift) alle anderen
+   Unterschriften müssen auf höherem Level sein (## Unterschrift) 
+ - Dokumenten-Name überprüfen: Nur "Standard"-Buchstaben verwenden (kein ßäöü)
+ - Dokument auf GitHub hochladen
+ - Dokument zu _toc.yml hinzufügen
+ - Überprüfen, ob alle benötigten Pakete bereits im [environment.yml] installiert sind. Wenn nicht dann hinzufügen. 
+ - Pull request erstellen
+
+  
+ 
+  
