@@ -32,6 +32,7 @@ jobs:
           fi
 
   test-book:
+    needs: create-docker-image
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/methods-berlin/rtraining_dep:latest
