@@ -32,8 +32,7 @@ in myst-Markdown übersetzt. myst-Markdown ist die von JupyterBook unterstützte
 Markdown Version. Neue Aufgaben werden hinzugefügt, indem diese als Rmd-Dateien
 im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei 
 (z.B. bei "neue_Aufgabe.Rmd" ist der Name "neue_Aufgabe") im Dokument _toc.yml
-hinzugefügt werden. Der Name der Datei darf keine Umlaute enthalten, z.B. statt "Einführung in R", muss
-die Datei "Einfuerung in R" bennant werden. 
+hinzugefügt werden. Der Name der Datei darf **keine Umlaute** enthalten und statt Leerzeichen muss man Unterstriche nutzen, z.B. statt "Einführung in R", muss die Datei "Einfuerung_in_R" bennant werden. 
 
 Wenn die Aufgabe R-Pakete nutzt, muss zusätzlich überprüft werden, ob dieses 
 bereits installiert wird. Alle bisher installierten Pakete werden im Dokument
