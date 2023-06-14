@@ -147,6 +147,9 @@ replace_details <- function(x){
 #' @param x text
 #' @return x 
 replace_code <- function(x){
+  
+  empty_lines <- c()
+  
   for(i in 1:length(x)){
     if(grepl(pattern = "```\\{ *r", x = x[i])){
       # code starts
@@ -160,7 +163,6 @@ replace_code <- function(x){
       
       # search for end:
       tags_qmd <- c()
-      empty_lines <- c()
       
       for(j in (i+1):length(x)){
         if(grepl(pattern = "```", x = x[j]))
@@ -210,7 +212,10 @@ replace_code <- function(x){
       }
     }
   }
-  x <- x[-empty_lines]
+  if(length(empty_lines)!= 0){
+    x <- x[-empty_lines]
+  }
+  
   return(x)
 }
 
