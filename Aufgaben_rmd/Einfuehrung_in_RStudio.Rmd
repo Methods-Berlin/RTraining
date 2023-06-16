@@ -1,0 +1,130 @@
+---
+title: "Einführung in R Studio"
+output: html_document
+date: "2023-06-14"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Einführung in RStudio
+
+## R Dokumentation mean()
+
+Suche die R-Dokumentation für die Funktion mean(). 
+
+a) Was ist der Zweck dieser Funktion? 
+b) Was sind die Parameter und default Argumente dieser Funktion? 
+c) Was passiert mit dem Argument trim = 0.2? 
+d) Wende die Funktion an einem Vektor "vek_1" mit Werten 1,2,3,4,5,6,7,8,9,10 einmal mit trim = 0 und einmal mit trim = 0.2 Argument an.
+e) Ersetze nun den Wert 9 mit einem NA (Missing) und wende die Funktion mit den default Argumenten wieder an. Was passiert? Was muss man anpassen? 
+
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+ 
+<!-- loesung: start-->
+
+<details>
+a) Die Fuktion mean() berechnet den Mittelwert. 
+b) Die Parameter und ihre default Argumente sind: trim = 0 und na.rm = FALSE
+c) Das Argument trimmt die höchsten 20% und die niedrigsten 20% der Werte des Objektes "x" vor der Berechnung des Mittelwerts.
+</details>
+
+</details>
+```{r}
+#d)
+vek_1 <- c(2,3,4,5,6,7,8,9,10,20)
+mean(vek_1, trim = 0)
+mean(vek_1, trim = 0.2)
+
+#e)
+vek_1 <- c(2,3,4,5,6,7,8,NA,10,20)
+mean(vek_1, trim = 0, na.rm = FALSE) # NA wird nicht entfernt und deswegen kann kein Mittelwert berechnet werden 
+
+mean(vek_1, trim = 0, na.rm = TRUE) # mit na.rm = TRUE wird der NA vorher entfernt 
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+## R Dokumentation rowsum()
+
+Suche die R-Dokumentation für die Funktion rowsum().
+
+a) Was ist der Zweck dieser Funktion? 
+b) Aus welchem Paket stammt die Funktion?
+c) Erstelle einen Datensatz mit folgenden Variablen: 
+var_1 = 3,4,5,6
+var_2 = 8,1,2,3
+group = c,c,b,b
+Wende die rowsum() Funktion mit den default Argumenten auf diesen Datensatz an. 
+  
+  
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+<!-- loesung: start-->
+
+<details>
+a) Die Funktion rowsum() berechnet den Gesamtwert der Zeilen einer Matrix oder eines Datensatzes für jedes Level der Gruppierungsvariable.
+b) Die Funktion stammt aus dem Basispaket base.
+</details>
+
+</details>
+```{r}
+#c)
+var_1 <- c(3,4,5,6)
+var_2 <- c(8,1,2,3)
+group <- c("c","c","b","b")
+df <- data.frame(var_1, var_2, group)
+rowsum(df[c("var_1", "var_2")], group = df$group, reoder = TRUE, na.rm = FALSE)
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+## Environment Objekte
+
+Welche Objekte befinden sich, nach Beendigung der vorherigen Aufgaben, in dem Environment? Welche Datentypen sind diese Objekte? 
+
+<!-- loesung: start-->
+<details>
+Die Objekte, die sich im Environment befinden, sind: "df", "vek_1", "var_1", "var_2", "group". 
+Datentypen: 
+"df" - Datensatz 
+"vek_1", "var_1", "var_2" - Numerische Vektors
+"group" - Character Vektor 
+</details>
+<!-- loesung: ende-->
+
+
+## Environment Löschen
+
+Lösche das Objekt "var_2" aus dem Environment. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+rm(var_2)
+
+```
+</details>
+<!-- loesung: ende--> 
+
