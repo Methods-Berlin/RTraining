@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
+- file: Einfuehrung in RStudio
 - file: Einfuehrung in R
 - file: Aufgaben_hinzufuegen
 - file: test_1
