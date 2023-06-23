@@ -422,7 +422,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objekt-logische-operationen">Objekt, Logische Operationen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-datentypen-arithmetische-operationen">Vektor, Datentypen, Arithmetische Operationen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zahlenfolgen-seq-rep">Zahlenfolgen; seq() &amp; rep()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zahlenfolgen-seq-rep">Zahlenfolgen; <code class="docutils literal notranslate"><span class="pre">seq()</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">rep()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speziallfall-faktor-indexieren">Speziallfall Faktor, Indexieren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrizen">Matrizen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liste">Liste</a></li>
@@ -444,7 +444,7 @@ document.write(`
 <p><a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/Rmd_ohne_Loesungen/Einfuehrung_in_R.Rmd download=Einfuehrung_in_R.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a></p>
 <section id="objekt-logische-operationen">
 <h2>Objekt, Logische Operationen<a class="headerlink" href="#objekt-logische-operationen" title="Permalink to this headline">#</a></h2>
-<p>Erstelle ein Objekt “x” und weise den Wert 5000 zu. Erstelle ein Objekt “y” und weise den Wert 8 hoch 4 zu. Überprüfe, ob der Objekt “y” kleiner oder gleich dem Wert “x” ist.</p>
+<p>Erstelle ein Objekt <code class="docutils literal notranslate"><span class="pre">x</span></code> und weise <code class="docutils literal notranslate"><span class="pre">x</span></code> den Wert 5000 zu. Erstelle ein Objekt <code class="docutils literal notranslate"><span class="pre">y</span></code> und weise <code class="docutils literal notranslate"><span class="pre">y</span></code> den Wert 8 hoch 4 zu (d.h. <span class="math notranslate nohighlight">\(8^4\)</span>). Überprüfe, ob die Werte der Objekte <code class="docutils literal notranslate"><span class="pre">x</span></code> und <code class="docutils literal notranslate"><span class="pre">y</span></code> gleich sind.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier kannst du deine Lösung ausprobieren.</span>
@@ -473,7 +473,7 @@ document.write(`
 </section>
 <section id="vektor-datentypen-arithmetische-operationen">
 <h2>Vektor, Datentypen, Arithmetische Operationen<a class="headerlink" href="#vektor-datentypen-arithmetische-operationen" title="Permalink to this headline">#</a></h2>
-<p>Erstelle einen Vektor “a” mit folgenden Zahlen: 3,4,6,7,25 und einen Vektor “b”: 4.5,6.5,8.5,5.5,7.5. Multipliziere den Vektor “a” und mit dem Vektor “b” und addiere den Wert 2. Speichere das Produkt unter einem Objekt “a_b”. Welches Datentyp wird dieses Objekt beinhalten? Überprüfe es.</p>
+<p>Erstelle einen Vektor <code class="docutils literal notranslate"><span class="pre">a</span></code> mit den Zahlen 3, 4, 6, 7 und 25 und einen Vektor <code class="docutils literal notranslate"><span class="pre">b</span></code> mit 4.5, 6.5, 8.5, 5.5 und 7.5. Multipliziere den Vektor <code class="docutils literal notranslate"><span class="pre">a</span></code> und mit dem Vektor <code class="docutils literal notranslate"><span class="pre">b</span></code> und addiere den Wert 2. Speichere das Ergebnis als Objekt namens <code class="docutils literal notranslate"><span class="pre">a_b</span></code>. Welches Datentyp wird dieses Objekt beinhalten? Überprüfe es.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier kannst du deine Lösung ausprobieren.</span>
@@ -488,25 +488,22 @@ document.write(`
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">25</span><span class="p">)</span>
-<span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4.5</span><span class="p">,</span><span class="m">6.5</span><span class="p">,</span><span class="m">8.5</span><span class="p">,</span><span class="m">5.5</span><span class="p">,</span><span class="m">7.5</span><span class="p">)</span>
-<span class="n">a_b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="m">+2</span>
-<span class="nf">str</span><span class="p">(</span><span class="n">a_b</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">)</span>
+<span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4.5</span><span class="p">,</span><span class="w"> </span><span class="m">6.5</span><span class="p">,</span><span class="w"> </span><span class="m">8.5</span><span class="p">,</span><span class="w"> </span><span class="m">5.5</span><span class="p">,</span><span class="w"> </span><span class="m">7.5</span><span class="p">)</span>
+<span class="n">a_b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span>
+<span class="nf">class</span><span class="p">(</span><span class="n">a_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> num [1:5] 15.5 28 53 40.5 189.5
-</pre></div>
-</div>
-</div>
+<div class="output text_html">'numeric'</div></div>
 </details>
 </div>
 <!-- loesung: ende-->
 </section>
 <section id="zahlenfolgen-seq-rep">
-<h2>Zahlenfolgen; seq() &amp; rep()<a class="headerlink" href="#zahlenfolgen-seq-rep" title="Permalink to this headline">#</a></h2>
-<p>Erstelle einen Vektor “vek_1” mit einer Zahlreihe von 5 bis 30 in Fünferschritten und einen Vektor “vek_2” mit einer Zahlenfolge von 2.5 in 6-facher Ausführung. Subtrahiere den “vek_2” vom “vek_1”. Wie könnte die resultierende Zahlreihe alternativ erzeugt werden?</p>
+<h2>Zahlenfolgen; <code class="docutils literal notranslate"><span class="pre">seq()</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">rep()</span></code><a class="headerlink" href="#zahlenfolgen-seq-rep" title="Permalink to this headline">#</a></h2>
+<p>Erstelle einen Vektor <code class="docutils literal notranslate"><span class="pre">vek_1</span></code> mit einer Zahlenreihe von 5 bis 30 in Fünferschritten und einen Vektor <code class="docutils literal notranslate"><span class="pre">vek_2</span></code>, der 6 mal die Zahl 2.5 enthält. Erstelle beide Vektoren mit den R-Funktionen <code class="docutils literal notranslate"><span class="pre">seq()</span></code> und <code class="docutils literal notranslate"><span class="pre">rep()</span></code>. Subtrahiere den Vektor <code class="docutils literal notranslate"><span class="pre">vek_2</span></code> von <code class="docutils literal notranslate"><span class="pre">vek_1</span></code>. Wie könnte die resultierende Zahlreihe alternativ erzeugt werden?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier kannst du deine Lösung ausprobieren.</span>
@@ -549,9 +546,9 @@ document.write(`
 <section id="speziallfall-faktor-indexieren">
 <h2>Speziallfall Faktor, Indexieren<a class="headerlink" href="#speziallfall-faktor-indexieren" title="Permalink to this headline">#</a></h2>
 <p>In einer Klasse sind folgende Schüler: Anton, Luca, Matteo, Max und Emil.</p>
-<p>a) Erstelle einen  Faktor (speziellen Vektor) “schüler_1” mit den Namen. Die Namen der Schüler sollen in einer alphabetischen auftreten. Wie könntest du dieses effizient machen?
+<p>a) Erstelle einen  Faktor (spezieller Datentyp) <code class="docutils literal notranslate"><span class="pre">schüler_1</span></code>, der die Namen der Schüler beinhaltet. Die Namen der Schüler sollen in alphabetischer Reihenfolge auftreten. Gehe dabei so effizient wie möglich vor.
 b) Lass dir den Namen des 4. Schülers ausgeben.
-c) Erstelle nun einen weiteren Faktor “schüler_2” bei dem die Namen in der ursprunglichen Reihenfolge (Anton, Luca, Matteo, Max und Emil) sortiert sind.
+c) Erstelle nun einen weiteren Faktor <code class="docutils literal notranslate"><span class="pre">schüler_2</span></code>, bei dem die Namen in der ursprünglichen Reihenfolge (Anton, Luca, Matteo, Max und Emil) sortiert sind.
 d) Lass dir die beiden Faktoren ausgeben.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -571,30 +568,71 @@ d) Lass dir die beiden Faktoren ausgeben.</p>
 <span class="n">schüler_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Anton&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luca&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Matteo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Max&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Emil&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1">#b)</span>
-<span class="n">schüler</span><span class="p">[</span><span class="m">4</span><span class="p">]</span>
+<span class="n">schüler_1</span><span class="p">[</span><span class="m">4</span><span class="p">]</span>
 
 <span class="c1">#c)</span>
-<span class="n">schüler_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">schüler_1</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Anton&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luca&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Matteo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Max&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Emil&quot;</span><span class="p">))</span>
+<span class="n">schüler_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">schüler_1</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Anton&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Luca&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Matteo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Max&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Emil&quot;</span><span class="p">))</span>
 
 <span class="c1">#d)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">schüler_1</span><span class="p">)</span><span class="w"> </span><span class="c1">#alternativ auch ohne &quot;print()&quot;</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">schüler_2</span><span class="p">)</span><span class="w"> </span><span class="c1">#alternativ auch ohne &quot;print()&quot;</span>
+<span class="n">schüler_1</span>
+<span class="n">schüler_2</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="nb">eval</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">envir</span><span class="p">,</span> <span class="n">enclos</span><span class="p">):</span> <span class="nb">object</span> <span class="s1">&#39;schüler&#39;</span> <span class="ow">not</span> <span class="n">found</span>
-<span class="ne">Traceback</span>:
-</pre></div>
-</div>
-</div>
+<div class="output text_html">Max
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<style>
+	.list-inline {list-style: none; margin:0; padding: 0}
+	.list-inline>li {display: inline-block}
+	.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+	</style>
+	<ol class=list-inline><li>'Anton'</li><li>'Emil'</li><li>'Luca'</li><li>'Matteo'</li><li>'Max'</li></ol>
+</details></div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>Anton</li><li>Luca</li><li>Matteo</li><li>Max</li><li>Emil</li></ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<style>
+	.list-inline {list-style: none; margin:0; padding: 0}
+	.list-inline>li {display: inline-block}
+	.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+	</style>
+	<ol class=list-inline><li>'Anton'</li><li>'Emil'</li><li>'Luca'</li><li>'Matteo'</li><li>'Max'</li></ol>
+</details></div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>Anton</li><li>Luca</li><li>Matteo</li><li>Max</li><li>Emil</li></ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<style>
+	.list-inline {list-style: none; margin:0; padding: 0}
+	.list-inline>li {display: inline-block}
+	.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+	</style>
+	<ol class=list-inline><li>'Anton'</li><li>'Luca'</li><li>'Matteo'</li><li>'Max'</li><li>'Emil'</li></ol>
+</details></div></div>
 </details>
 </div>
 <!-- loesung: ende-->
 </section>
 <section id="matrizen">
 <h2>Matrizen<a class="headerlink" href="#matrizen" title="Permalink to this headline">#</a></h2>
-<p>Erstelle eine Matrix “m_1” mit den 2 Zeilen und 2 Spalten mit den Zahlen 4,7,9,2, die zeilenweise eingetragen werden.
+<p>Erstelle eine Matrix <code class="docutils literal notranslate"><span class="pre">m_1</span></code> mit 2 Zeilen und 2 Spalten mit den Zahlen 4, 7, 9 und 2, die zeilenweise eingetragen werden.
 a) Lass dir die 1. Zeile ausgeben.
 b) Lass dir die 2. Spalte ausgeben.</p>
 <div class="cell docutils container">
@@ -611,7 +649,7 @@ b) Lass dir die 2. Spalte ausgeben.</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">m_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">m_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1">#a) </span>
 <span class="n">m_1</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
@@ -620,13 +658,27 @@ b) Lass dir die 2. Spalte ausgeben.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>4</li><li>7</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>7</li><li>2</li></ol>
+</div></div>
 </details>
 </div>
 <!-- loesung: ende-->
-<p>Erstelle eine Matrix “m_2” mit den Zahlen 3 Zeilen und 3 Reihen mit den Zahlen 7,3,0,5,6,1,1,9,11 die spaltenweise eingetragen werden.
+<p>Erstelle eine Matrix <code class="docutils literal notranslate"><span class="pre">m_2</span></code> mit 3 Zeilen und 3 Reihen mit den Zahlen 7, 3, 0, 5, 6, 1, 1, 9 und 11, die spaltenweise eingetragen werden.
 a) Lass dir den Wert in der 1. Zeile und 3. Spalte ausgeben.
 b) Lass dir den Wert in der 2. Zeile und 3. Spalte ausgeben.
-c) Benenne die Zeilen A1, A2, A3 und die Spalten B1, B2, B3.</p>
+c) Nenne die Zeilen A1, A2 und A3 und die Spalten B1, B2 und B3.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier kannst du deine Lösung ausprobieren.</span>
@@ -641,29 +693,31 @@ c) Benenne die Zeilen A1, A2, A3 und die Spalten B1, B2, B3.</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">m_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">11</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">m_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
 <span class="c1">#a)</span>
-<span class="n">m_2</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">]</span>
+<span class="n">m_2</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span>
 <span class="c1">#b)</span>
-<span class="n">m_2</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">]</span>
+<span class="n">m_2</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span>
 <span class="c1">#c)</span>
 <span class="nf">rownames</span><span class="p">(</span><span class="n">m_2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;A1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A3&quot;</span><span class="p">)</span>
 <span class="nf">colnames</span><span class="p">(</span><span class="n">m_2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;B1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B3&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">1</div><div class="output text_html">9</div></div>
 </details>
 </div>
 <!-- loesung: ende-->
 </section>
 <section id="liste">
 <h2>Liste<a class="headerlink" href="#liste" title="Permalink to this headline">#</a></h2>
-<p>Erstelle eine Liste für einen Sportwettkampf mit folgenden Objekten:
-a) Sportler: Tim, Alex, Finn, Martin
-b) Start: True, True, True, False
-b) Platz: 2,3,1, NA
-c) Qualifikation: False, False, True, False</p>
-<p>Lass dir aus der Liste das Objekt “Start” ausgeben.</p>
+<p>Erstelle eine Liste für einen Sportwettkampf, die die folgenden Vektoren enthält.
+a) <code class="docutils literal notranslate"><span class="pre">Sportler</span></code>: Tim, Alex, Finn, Martin
+b) <code class="docutils literal notranslate"><span class="pre">Start</span></code>: TRUE, TRUE, TRUE, FALSE
+b) <code class="docutils literal notranslate"><span class="pre">Platz</span></code>: 2,3,1, NA
+c) <code class="docutils literal notranslate"><span class="pre">Qualifikation</span></code>: FALSE, FALSE, TRUE, FALSE</p>
+<p>Lass dir aus der Liste das Objekt <code class="docutils literal notranslate"><span class="pre">Start</span></code> ausgeben.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier kannst du deine Lösung ausprobieren.</span>
@@ -679,21 +733,29 @@ c) Qualifikation: False, False, True, False</p>
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">list_wettkampf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">Sportler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Tim&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Finn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Martin&quot;</span><span class="p">),</span>
-<span class="w">                       </span><span class="n">Start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="bp">T</span><span class="p">,</span><span class="bp">T</span><span class="p">,</span><span class="bp">T</span><span class="p">,</span><span class="bp">F</span><span class="p">),</span>
-<span class="w">                       </span><span class="n">Platz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="kc">NA</span><span class="p">),</span>
-<span class="w">                       </span><span class="n">Qualifikation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="bp">F</span><span class="p">,</span><span class="w"> </span><span class="bp">F</span><span class="p">,</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span><span class="bp">F</span><span class="p">))</span>
+<span class="w">                       </span><span class="n">Start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">),</span>
+<span class="w">                       </span><span class="n">Platz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">),</span>
+<span class="w">                       </span><span class="n">Qualifikation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="w"> </span><span class="p">,</span><span class="kc">FALSE</span><span class="p">))</span>
 
 <span class="n">list_wettkampf</span><span class="o">$</span><span class="n">Start</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>TRUE</li><li>TRUE</li><li>TRUE</li><li>FALSE</li></ol>
+</div></div>
 </details>
 </div>
 <!-- loesung: ende-->
 </section>
 <section id="dataframe">
 <h2>Dataframe<a class="headerlink" href="#dataframe" title="Permalink to this headline">#</a></h2>
-<p>Du führst eine Studie zur Persönlichkeit und möchtest bei 4 Personen Extraversion und Verträglichkeit mithilfe eines Fragebogens erfassen. Schließlich bekommst du die Mittelwerte der jeweiligen Skala für jeden Teilnehmer. Die Mittelwerte für Extraversion für die 4 Teilnehmer sind: 3.0, 2.5, 3.0, 3.5 und die Mittelwerte der Verträglichkeit sind: 4.0, 3.5, 4.5, 3.0. Erstelle einen Datensatz “Persönlichkeit” mit 3 Spalten: “Teilnehmer”, “E” (Extraversion) und “V” (Verträglichkeit). Lass dir den Wert für Verstäglichkeit des 2. Teilnehmers ausgeben.</p>
+<p>Du führst eine Studie zur Persönlichkeit durch und möchtest bei 4 Personen Extraversion und Verträglichkeit mithilfe eines Fragebogens erfassen. Schließlich bekommst du die Mittelwerte der jeweiligen Skala für jeden Teilnehmer. Die Mittelwerte für Extraversion für die 4 Teilnehmer sind: 3.0, 2.5, 3.0, 3.5 und die Mittelwerte der Verträglichkeit sind: 4.0, 3.5, 4.5, 3.0. Erstelle einen Datensatz <code class="docutils literal notranslate"><span class="pre">Persönlichkeit</span></code> mit 3 Spalten: <code class="docutils literal notranslate"><span class="pre">Teilnehmer</span></code>, <code class="docutils literal notranslate"><span class="pre">E</span></code> (Extraversion) und <code class="docutils literal notranslate"><span class="pre">V</span></code> (Verträglichkeit). Lass dir den Wert für Verträglichkeit des 2. Teilnehmers ausgeben.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier kannst du deine Lösung ausprobieren.</span>
@@ -708,16 +770,18 @@ c) Qualifikation: False, False, True, False</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Teilnehmer</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Teilnehmer</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
 <span class="n">E</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3.0</span><span class="p">,</span><span class="w"> </span><span class="m">2.5</span><span class="p">,</span><span class="w"> </span><span class="m">3.0</span><span class="p">,</span><span class="w"> </span><span class="m">3.5</span><span class="p">)</span>
 <span class="n">V</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4.0</span><span class="p">,</span><span class="w"> </span><span class="m">3.5</span><span class="p">,</span><span class="w"> </span><span class="m">4.5</span><span class="p">,</span><span class="w"> </span><span class="m">3.0</span><span class="p">)</span>
 
 <span class="n">Persönlichkeit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">Teilnehmer</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">)</span>
 
-<span class="n">Persönlichkeit</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">]</span><span class="w"> </span>
+<span class="n">Persönlichkeit</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">3.5</div></div>
 </details>
 </div>
 <!-- loesung: ende-->
@@ -740,6 +804,21 @@ c) Qualifikation: False, False, True, False</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 4 × 4</caption>
+<thead>
+	<tr><th scope=col>Sportler</th><th scope=col>Start</th><th scope=col>Platz</th><th scope=col>Qualifikation</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Tim   </td><td> TRUE</td><td> 2</td><td>FALSE</td></tr>
+	<tr><td>Alex  </td><td> TRUE</td><td> 3</td><td>FALSE</td></tr>
+	<tr><td>Finn  </td><td> TRUE</td><td> 1</td><td> TRUE</td></tr>
+	<tr><td>Martin</td><td>FALSE</td><td>NA</td><td>FALSE</td></tr>
+</tbody>
+</table>
+</div></div>
 </details>
 </div>
 <!-- loesung: ende--></section>
@@ -814,7 +893,7 @@ c) Qualifikation: False, False, True, False</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objekt-logische-operationen">Objekt, Logische Operationen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-datentypen-arithmetische-operationen">Vektor, Datentypen, Arithmetische Operationen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zahlenfolgen-seq-rep">Zahlenfolgen; seq() &amp; rep()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zahlenfolgen-seq-rep">Zahlenfolgen; <code class="docutils literal notranslate"><span class="pre">seq()</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">rep()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speziallfall-faktor-indexieren">Speziallfall Faktor, Indexieren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrizen">Matrizen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liste">Liste</a></li>
