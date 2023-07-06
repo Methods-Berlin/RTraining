@@ -1,0 +1,27 @@
+---
+title: "Aufgaben hinzufügen"
+output: html_document
+date: "2023-05-17"
+---
+
+# Einführung in Statistik
+
+## Mittelwerte berechnen
+
+Erstelle einen Vektor x und berechne den Mittelwert.
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+```
+
+<!-- loesung: start-->
+
+<details>
+```{r}
+x <- c(1,2,3,4)
+mean(x)
+```
+</details>
+
+<!-- loesung: ende-->
+
