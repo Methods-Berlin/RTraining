@@ -1,0 +1,66 @@
+---
+title: "Pakete"
+output: html_document
+date: "2023-06-23"
+---
+# Pakete
+
+## Einführung
+
+Manche Funktionen, die wir für unsere Analysen nutzen wollen, sind nicht direkt in R verfügbar. Anders als die Funktionen 
+aus den Basispaketen, die automatisch in R vorhanden sind, müssen wir diese erst über Pakete verfügbar machen.
+Bevor wir eine solche Funktion das erste Mal nutzen, müssen wir das entsprechende Paket, welches diese Funktion 
+enthält, installieren. Wenn du das Paket einmal installiert hast, musst du es beim nächsten mal nur noch laden.
+
+## Pakete installieren
+
+Öffne RStudio und installiere das Paketet `ggplot2` über die Konsole.
+
+
+<br>
+
+Zusätzlich kannst du das Paket auch über die grafische Benutzeroberfläche von RStudio installieren. Dafür musst du keinen
+Befehl eingeben. Weißt du noch wie das geht?
+
+
+
+## Pakete laden
+
+Bevor du die Funktionen eines Pakets nutzen kannst, musst du das Paket laden. Dies muss jedes Mal gemacht werden, wenn du
+RStudio neu geöffnet hast. Am besten schreibst du den entsprechenden Befehl an den Anfang des R-Scripts für alle Pakete,
+die in dem Script benötigt werden. Alternativ kannst du den Befehl auch in der Konsole ausführen.
+
+Mit welchem Befehl kann das Paket `ggplot2` geladen werden? Probiere es in der Konsole von RStudio aus.
+
+
+Alternativ kannst du das Paket auch über die grafische benutzeroberfläche von RStudio laden. Probiere das doch auch 
+einmal aus.
+
+
+### Maskierung
+
+Manche Funktionen von verschiedenen Paketen haben den gleichen Namen. Wenn man dann beide Pakete geladen hat, kommt es zu
+Problemen, wenn man versucht die gedoppelte Funktion zu nutzen. Deshalb ist es manchmal hilfreich, eine Funktion zu 
+verwenden ohne das ganze Paket zu laden. 
+
+Nutze eine Funktion aus einem Paket deiner Wahl, ohne das Paket zu laden.
+
+
+## Pakete aktualisieren
+
+Pakete werden ab und an aktualisiert, deshalb sollten wir hin und wieder prüfen, ob unsere Pakete noch auf dem
+aktuellsten Stand sind. Dafür gibt es wie beim Installieren und Laden wieder mehrere Wege.
+
+Prüfe über die Konsole, ob die Pakete, die du installiert hast, noch aktuell sind.
+
+
+\
+Wie können die Pakete noch aktualisiert werden?
+
+
+## Pakete entfernen
+
+Manchmal kann es vorkommen, dass man Probleme mit dem Installieren oder Laden eines Pakets hat. Dann kann es mitunter helfen, das Paket zu deinstallieren.
+
+Deinstalliere das Paket `ggplot2` und installiere es anschließend neu.
+
