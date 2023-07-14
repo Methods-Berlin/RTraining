@@ -249,10 +249,10 @@ Korrekt wäre:
  Diese Checkliste kann zur Selbstüberprüfung verwendet werden: 
   
  - R Übungsaufgaben erstellen
- - Lösungen mit "<!-- loesung: start> Meine Lösung steht hier <!-- loesung: ende-->" markieren
+ - Lösungen mit "`<!-- loesung: start-->` Meine Lösung steht hier `<!-- loesung: ende-->`" markieren
  - Header level überprüfen: Nur die erste Überschrift darf auf Level 1 sein (# Erste Überschrift) alle anderen
    Unterschriften müssen auf höherem Level sein (## Unterschrift) 
- - Dokumenten-Name überprüfen: Nur "Standard"-Buchstaben verwenden (kein ßäöü)
+ - Dokumenten-Name überprüfen: Nur "Standard"-Buchstaben verwenden (kein ßäöü) und Unterstriche statt Leerzeichen verwenden
  - Dokument auf GitHub hochladen
  - Dokument zu _toc.yml hinzufügen
  - Überprüfen, ob alle benötigten Pakete bereits im [environment.yml] installiert sind. Wenn nicht dann hinzufügen. 
