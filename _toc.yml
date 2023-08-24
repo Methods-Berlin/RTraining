@@ -6,8 +6,10 @@ root: intro
 chapters:
 - file: Einfuehrung_in_RStudio
 - file: Einfuehrung_in_R
+- file: Pakete
 - file: Aufgaben_hinzufuegen
 - file: test_1
+- file: Einfuehrung_Statistik
 - file: Vektoren
 - file: Matrizen
 - file: Dataframe

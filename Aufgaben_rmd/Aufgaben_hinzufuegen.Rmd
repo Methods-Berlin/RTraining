@@ -16,7 +16,9 @@ in myst-Markdown übersetzt. myst-Markdown ist die von JupyterBook unterstützte
 Markdown Version. Neue Aufgaben werden hinzugefügt, indem diese als Rmd-Dateien
 im Ordern Aufgaben_rmd gespeichert werden. Zusätzlich muss der Name der Datei 
 (z.B. bei "neue_Aufgabe.Rmd" ist der Name "neue_Aufgabe") im Dokument _toc.yml
-hinzugefügt werden. Der Name der Datei darf **keine Umlaute** enthalten und statt Leerzeichen muss man Unterstriche nutzen, z.B. statt "Einführung in R", muss die Datei "Einfuerung_in_R" bennant werden. 
+hinzugefügt werden. Der Name der Datei darf **keine Umlaute** enthalten und statt 
+Leerzeichen muss man Unterstriche nutzen, z.B. statt "Einführung in R", muss die 
+Datei "Einfuehrung_in_R" bennant werden. 
 
 Wenn die Aufgabe R-Pakete nutzt, muss zusätzlich überprüft werden, ob dieses 
 bereits installiert wird. Alle bisher installierten Pakete werden im Dokument
@@ -210,10 +212,10 @@ Korrekt wäre:
  Diese Checkliste kann zur Selbstüberprüfung verwendet werden: 
   
  - R Übungsaufgaben erstellen
- - Lösungen mit "<!-- loesung: start> Meine Lösung steht hier <!-- loesung: ende-->" markieren
+ - Lösungen mit "`<!-- loesung: start-->` Meine Lösung steht hier `<!-- loesung: ende-->`" markieren
  - Header level überprüfen: Nur die erste Überschrift darf auf Level 1 sein (# Erste Überschrift) alle anderen
    Unterschriften müssen auf höherem Level sein (## Unterschrift) 
- - Dokumenten-Name überprüfen: Nur "Standard"-Buchstaben verwenden (kein ßäöü)
+ - Dokumenten-Name überprüfen: Nur "Standard"-Buchstaben verwenden (kein ßäöü) und Unterstriche statt Leerzeichen verwenden
  - Dokument auf GitHub hochladen
  - Dokument zu _toc.yml hinzufügen
  - Überprüfen, ob alle benötigten Pakete bereits im [environment.yml] installiert sind. Wenn nicht dann hinzufügen. 
