@@ -1,0 +1,42 @@
+
+# Vektoren
+
+
+Erstelle einen Vektor "a" mit den Werten 3, 4, 6, 7, 9, 10. Greife den 3. Wert heraus. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Erstelle einen Vektor "b" mit den Werten 4.5, 6.5, 8.5, 5.5, 7.5, 3.5. Greife den 2., 4. und 6. Wert heraus. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Erstelle einen Vektor "c" mit den Werten 0, 1, 0, 2, 2. Ändere den 3. Wert zu 1 und den 4. Wert zu NA. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Erstelle einen character Vektor "schüler", der die Namen Luca, Matteo und Emil beinhaltet.
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
