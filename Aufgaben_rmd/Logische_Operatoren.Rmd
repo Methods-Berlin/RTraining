@@ -1,0 +1,43 @@
+
+# Logische Operatoren 
+
+
+Erstelle ein Objekt "x" mit dem Wert 5000 und ein Objekt "y" mit dem Wert 8 hoch 4 (d.h. 8^4). Überprüfe, ob "x" großer als "y" ist. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+x <- 5000
+y <- 8^4
+x > y
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+Erstelle einen Vektor "z" mit den Werten 0.5, 0.75, 0.25, 1, 1.25, 1.5. Überprüfe welche Werte kleiner gleich 1 sind. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+z <- c(0.5, 0.75, 0.25, 1, 1.25, 1.5)
+z <= 1
+
+```
+</details>
+<!-- loesung: ende-->
