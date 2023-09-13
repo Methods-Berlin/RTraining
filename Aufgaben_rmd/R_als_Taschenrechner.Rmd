@@ -1,0 +1,69 @@
+
+# R als Taschenrechner 
+
+
+Multipliziere $17/4$ und $8$ und speichere es unter Objekt "A". Quadriere das Objekt und ziehe $52$ ab. 
+
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+A <- 17/4 * 8
+A^2 - 52
+  
+```
+</details>
+<!-- loesung: ende-->
+
+
+Teile $3.5 - 5.67$ durch $876.76 * 7.8$ und multipliziere alles mit $2.3$. Speichere dies unter "B". 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+B <- ((3.5 - 5.67) / (76.76 * 7.8)) * 2
+  
+```
+</details>
+<!-- loesung: ende-->
+
+
+Berechne $3.3 ^ 4$ und speichere dies unter "C". Berechne dann folgendes mit den gespeicherten Objekten: 
+
+A + B + C 
+A/B + C
+A * B * C
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+C <- 3.3 ^ 4
+
+A + B + C 
+A/B + C
+A * B * C
+  
+```
+</details>
+<!-- loesung: ende-->

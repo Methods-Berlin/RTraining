@@ -1,0 +1,99 @@
+
+# Datentypen
+
+
+Schreibe 74,678 in R.
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+74.678
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+Könnte man auch das Komma als Trennzeichen benutzen? 
+
+<!-- loesung: start-->
+<details>
+
+Nein, R verwendet ausschließlich den Punkt als Trennzeichen und gibt beim Komma eine Fehlermeldung. 
+```{r}
+
+74,678
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+
+Speichere die Nummer 4560 einmal als Zahl und einmal als Text. Benne das Objekt "nummer". 
+
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+nummer <- 4560
+nummer <- "4560"
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+Stell dir vor, du hast einen Hund, der Baloo heißt, 10 Kg wiegt und gern spielt. Du möchtest diese 3 Merkmale in R schreiben und unter verschiedenen Objekten speichern. Wie könntest du das machen? 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+name <- "Baloo"
+kg <- 10
+spiel <- TRUE
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+Erstelle einen Faktor "farben" mit drei verschiedenen Farbalternativen: blau, rot und grün. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+farben <- factor(levels = c("blau", "rot", "grün"))
+
+```
+</details>
+<!-- loesung: ende-->
