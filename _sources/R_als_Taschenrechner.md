@@ -38,7 +38,6 @@ Multipliziere $17/4$ und $8$ und speichere es unter Objekt "A". Quadriere das Ob
 
 A <- (17/4) * 8
 A^2 - 52
-  
 ```
 
 
@@ -60,7 +59,6 @@ Teile $3.5 - 5.67$ durch $76.76 * 7.8$ und multipliziere alles mit $2.3$. Speich
 :tags: [hide-cell]
 
 B <- ((3.5 - 5.67) / (76.76 * 7.8)) * 2.3
-  
 ```
 
 
@@ -69,9 +67,9 @@ B <- ((3.5 - 5.67) / (76.76 * 7.8)) * 2.3
 
 Berechne $3.3^4$ und speichere dies unter "C". Berechne dann folgendes mit den gespeicherten Objekten: 
 
-A + B + C 
-A/B + C
-A * B * C
+* A + B + C 
+* A/B + C
+* A * B * C
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
