@@ -1,0 +1,49 @@
+
+# Datentypen
+
+
+Schreibe 74,678 in R.
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Könnte man auch das Komma als Trennzeichen benutzen? 
+
+
+
+
+Speichere die Nummer 4560 einmal als Zahl und einmal als Text. Benne das Objekt "nummer". 
+
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Stell dir vor, du hast einen Hund, der Baloo heißt, 10 Kg wiegt und gern spielt. Du möchtest diese 3 Merkmale in R schreiben und unter verschiedenen Objekten speichern. Wie könntest du das machen? 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Erstelle einen Faktor "farben" mit drei verschiedenen Farbalternativen: blau, rot und grün. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+

@@ -12,7 +12,17 @@ Erstelle eine Matrix "m_1" mit den Werten 4, 7, 9, 2. Die Matrix soll 2 Zeilen u
 
 
 
-Erstelle eine Matrix "m_2" mit den Werten 7, 3, 0, 5, 6, 1, 1, 9, 11. Die Matrix soll 3 Zeilen und 3 Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Greife den Wert in der 1. Zeile und 3. Spalte heraus.
+Erstelle eine Matrix "m_2" mit den Werten 7, 3, 0, 5, 6. Die Matrix soll 2 Zeilen und 2 Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Greife die 2. Spalte heraus.
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Erstelle eine Matrix "m_3" mit den Werten 6, 1, 1, 9, 11, 15. Die Matrix soll 3 Zeilen und 3 Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Greife den Wert in der 3. Zeile und 2. Spalte heraus.
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.

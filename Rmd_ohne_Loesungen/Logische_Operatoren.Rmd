@@ -12,7 +12,17 @@ Erstelle ein Objekt "x" mit dem Wert 5000 und ein Objekt "y" mit dem Wert 8 hoch
 
 
 
-Erstelle einen Vektor "z" mit den Werten 0.5, 0.75, 0.25, 1, 1.25, 1.5. Überprüfe welche Werte kleiner gleich 1 sind. 
+Erstelle einen Vektor "z" mit den Werten 0.5, 0.75, 0.25, 1, 1.25, 1.5. Überprüfe, welche Werte kleiner oder gleich 1 sind. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Erstelle einen Vektor "v" mit den Werten 5,3,4,5,5,7,2. Ändere den zweiten Wert auf 5. Speichere alle Werte mit einer 5 aus dem Vektor "v" in einen neuen Vektor "w".
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
