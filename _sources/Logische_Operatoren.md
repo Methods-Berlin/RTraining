@@ -45,7 +45,7 @@ x > y
 <!-- loesung: ende-->
 
 
-Erstelle einen Vektor "z" mit den Werten 0.5, 0.75, 0.25, 1, 1.25, 1.5. Überprüfe welche Werte kleiner gleich 1 sind. 
+Erstelle einen Vektor "z" mit den Werten 0.5, 0.75, 0.25, 1, 1.25, 1.5. Überprüfe, welche Werte kleiner oder gleich 1 sind. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -61,6 +61,30 @@ Erstelle einen Vektor "z" mit den Werten 0.5, 0.75, 0.25, 1, 1.25, 1.5. Überpr�
 
 z <- c(0.5, 0.75, 0.25, 1, 1.25, 1.5)
 z <= 1
+
+```
+
+
+<!-- loesung: ende-->
+
+
+Erstelle einen Vektor "v" mit den Werten 5,3,4,5,5,7,2. Ändere den zweiten Wert auf 5. Speichere alle Werte mit einer 5 aus dem Vektor "v" in einen neuen Vektor "w".
+
+```{code-cell} r
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+
+
+```{code-cell} r
+:tags: [hide-cell]
+
+v <- c(5,3,4,5,5,7,2)
+v[2] <- 5
+w <- v[v == 5]
 
 ```
 

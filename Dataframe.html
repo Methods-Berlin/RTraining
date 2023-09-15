@@ -158,11 +158,17 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="R_als_Taschenrechner.html">R als Taschenrechner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Skripte.html">Skripte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Datentypen.html">Datentypen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Vektoren.html">Vektoren</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matrizen.html">Matrizen</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Dataframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logische_Operatoren.html">Logische Operatoren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Funktionen.html">Funktionen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pakete.html">Pakete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pipe_Operator.html">Pipe-Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Fehler.html">Fehler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Einfuehrung_Statistik.html">Einführung in Statistik</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aufgaben_hinzufuegen.html">Aufgaben hinzufügen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test_1.html">Testdokument</a></li>
@@ -431,8 +437,20 @@ document.write(`
 <h1>Dataframe<a class="headerlink" href="#dataframe" title="Permalink to this headline">#</a></h1>
 <p><a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Dataframe.Rmd download=Dataframe.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a></p>
 <p><a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/Rmd_ohne_Loesungen/Dataframe.Rmd download=Dataframe.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a></p>
-<p>Erstelle eine Matrix “scores” mit den Werten 2, 3, 2, 3, 4, 5, 4, 3, 5, 2, 3, 3 mit 3 Spalten und 4 Zeilen. Die Werten sollen zeilenweise eingetragen werden. Wandle die Matrix dann in ein Dataframe “data”. Bennene die Spalten: “Item 1”, “Item 2”, “Item 3”. Greife die Werte der ersten Spalte (“Item 1”) heraus.</p>
+<p>Erstelle eine Matrix “scores” mit den Werten 2, 3, 2, 3, 4, 5, 4, 3, 5, 2, 3, 3 mit 3 Spalten und 4 Zeilen. Die Werten sollen zeilenweise eingetragen werden. Wandle die Matrix dann in ein Dataframe “data”. Bennene die Spalten: “Item 1”, “Item 2”, “Item 3”. Greife die Werte der 1. Spalte (“Item 1”) heraus.</p>
 <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier kannst du deine Lösung ausprobieren.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<!-- loesung: start--><div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 <span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
@@ -449,7 +467,32 @@ document.write(`
 </style>
 <ol class=list-inline><li>2</li><li>3</li><li>4</li><li>2</li></ol>
 </div></div>
+</details>
 </div>
+<!-- loesung: ende-->
+<p>Nehme in den bestehenden Datensatz eine weitere Variable “Consent” mit auf, die beinhaltet, ob die Teilnehmer*innen ihre Einwilligung für die Studienteilnahme gegeben haben. Alle außer der letzten Person haben ihre Einwilligung gegeben. Mache dies mithilfe logischer Werte (Booleans).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier kannst du deine Lösung ausprobieren.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<!-- loesung: start--><div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Consent</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">data</span><span class="o">$</span><span class="n">Consent</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">Consent</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<!-- loesung: ende-->
 <p>Du führst eine Studie zur Persönlichkeit durch und möchtest bei 4 Personen Extraversion und Verträglichkeit mithilfe eines Fragebogens erfassen. Schließlich bekommst du die Mittelwerte der jeweiligen Skala für jeden Teilnehmer. Die Mittelwerte für Extraversion für die 4 Teilnehmer sind: 3.0, 2.5, 3.0, 3.5 und die Mittelwerte der Verträglichkeit sind: 4.0, 3.5, 4.5, 3.0. Erstelle einen Datensatz “Persönlichkeit” mit 3 Spalten: “Teilnehmer”, “E” (Extraversion) und “V” (Verträglichkeit). Greife den Wert für Verträglichkeit des 2. Teilnehmers heraus.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

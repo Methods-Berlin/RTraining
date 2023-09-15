@@ -45,7 +45,7 @@ m_1[1, ]
 <!-- loesung: ende-->
 
 
-Erstelle eine Matrix "m_2" mit den Werten 7, 3, 0, 5, 6, 1, 1, 9, 11. Die Matrix soll 3 Zeilen und 3 Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Greife den Wert in der 1. Zeile und 3. Spalte heraus.
+Erstelle eine Matrix "m_2" mit den Werten 7, 3, 0, 5, 6. Die Matrix soll 2 Zeilen und 2 Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Greife die 2. Spalte heraus.
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -59,9 +59,33 @@ Erstelle eine Matrix "m_2" mit den Werten 7, 3, 0, 5, 6, 1, 1, 9, 11. Die Matrix
 ```{code-cell} r
 :tags: [hide-cell]
 
-m_2 <- matrix(data = c(7, 3, 0, 5, 6, 1, 1, 9, 11), nrow = 3, byrow = FALSE)
+m_2 <- matrix(data = c(7, 3, 0, 5), nrow = 2, ncol = 2, byrow = FALSE)
 
-m_2[1, 3]
+m_2[ , 2]
+
+```
+
+
+<!-- loesung: ende-->
+
+
+Erstelle eine Matrix "m_3" mit den Werten 6, 1, 1, 9, 11, 15. Die Matrix soll 3 Zeilen und 3 Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Greife den Wert in der 3. Zeile und 2. Spalte heraus.
+
+```{code-cell} r
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+
+
+```{code-cell} r
+:tags: [hide-cell]
+
+m_3 <- matrix(data = c(6, 1, 1, 9, 11, 15), nrow = 3, ncol = 2, byrow = FALSE)
+
+m_3[3, 2]
 
 ```
 
