@@ -4,11 +4,17 @@
 format: jb-book
 root: intro
 chapters:
+- file: R_als_Taschenrechner
+- file: Skripte
+- file: Datentypen
 - file: Vektoren
 - file: Matrizen
 - file: Dataframe
 - file: Logische_Operatoren
+- file: Funktionen
 - file: Pakete
+- file: Pipe_Operator
+- file: Fehler
 - file: Einfuehrung_Statistik
 - file: Aufgaben_hinzufuegen
 - file: test_1

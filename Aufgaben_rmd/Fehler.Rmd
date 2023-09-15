@@ -1,0 +1,86 @@
+
+# Fehler 
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+
+```{r}
+
+library(ggplot)
+
+```
+
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+library(ggplot2)
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+
+```{r}
+
+x <- 10
+y <- "5"
+result <- x + y
+
+```
+
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+x <- 10
+y <- 5  # y wurde als Text gespeichert und Berechnungen können nicht auf Text angewendet werden
+result <- x + y
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+
+```{r}
+
+vek <- c(10, 20, 30, 40, 50)
+vec[4,2]
+
+```
+
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+vec <- c(10, 20, 30, 40, 50)
+vec[2] # Ein Vektor ist eindimensional und nicht zweidimensional 
+
+```
+</details>
+<!-- loesung: ende-->

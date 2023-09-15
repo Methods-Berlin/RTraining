@@ -1,0 +1,82 @@
+
+# Pipe-Operator
+
+Schreibe den folgenden Code mithilfe des Pipe-Operators um: 
+
+```{r}
+
+numbers <- c(-1, -2, -3, -4, -5)
+numbers_positive <- abs(numbers)
+numbers_sum <- sum(numbers_positive)
+print(numbers_sum)
+
+```
+
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+numbers_sum <- c(-1, -2, -3, -4, -5) |> 
+  abs() |> 
+  sum()
+
+print(numbers_sum)
+  
+```
+</details>
+<!-- loesung: ende-->
+
+
+
+Erstelle mithilfe des Pipe-Operators einen Vektor mit Werten: 1.201, 1.243, 1.264, 1.156; und runde sie auf 2 Nachkommastellen. Speichere das Endprodukt unter "numbers_round".
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+numbers_round <- c(1.201, 1.243, 1.264, 1.156) |> 
+  round(2)
+
+print(numbers_round)
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+
+Erstelle mithilfe des Pipe-Operators einen Vektor mit Werten 2,3,6,7; berechne den Mittelwert und ziehe die Quadratwurzel aus dem Mittelwert. Speichere das Endprodukt unter "score".
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+score <- c(2,3,6,7) |> 
+  mean() |> 
+  sqrt()  
+  
+
+print(score)
+
+```
+</details>
+<!-- loesung: ende-->
