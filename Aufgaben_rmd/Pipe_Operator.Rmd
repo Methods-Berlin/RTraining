@@ -1,7 +1,10 @@
 
 # Pipe-Operator
 
-Schreibe den folgenden Code mithilfe des Pipe-Operators um: 
+
+## Aufgabe 1
+
+Schreibe den folgenden Code mit Hilfe des Pipe-Operators um: 
 
 ```{r}
 
@@ -34,8 +37,9 @@ print(numbers_sum)
 <!-- loesung: ende-->
 
 
+## Aufgabe 2
 
-Erstelle mithilfe des Pipe-Operators einen Vektor mit Werten: 1.201, 1.243, 1.264, 1.156; und runde sie auf 2 Nachkommastellen. Speichere das Endprodukt unter "numbers_round".
+Erstelle mit Hilfe des Pipe-Operators einen Vektor mit den Werten $1.201, 1.243, 1.264, 1.156$ und runde diese auf zwei Nachkommastellen. Speichere das Endprodukt unter `numbers_round`.
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
@@ -57,8 +61,9 @@ print(numbers_round)
 <!-- loesung: ende-->
 
 
+## Aufgabe 3
 
-Erstelle mithilfe des Pipe-Operators einen Vektor mit Werten 2,3,6,7; berechne den Mittelwert und ziehe die Quadratwurzel aus dem Mittelwert. Speichere das Endprodukt unter "score".
+Erstelle mit Hilfe des Pipe-Operators einen Vektor mit den Werten $2,3,6,7$, berechne den Mittelwert und ziehe die Quadratwurzel aus dem Mittelwert. Speichere das Endprodukt unter `score`.
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.

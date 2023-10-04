@@ -1,7 +1,15 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 
 # Fehler 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+
+## Aufgabe 1
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{r}
 
@@ -28,7 +36,9 @@ library(ggplot2)
 
 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+## Aufgabe 2
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{r}
 
@@ -51,6 +61,10 @@ result <- x + y
 
 x <- 10
 y <- 5  # y wurde als Text gespeichert und Berechnungen können nicht auf Text angewendet werden
+
+# alternativ kann Text (character) auch in eine Zahl (numeric) umgewandelt werden: 
+y <- as.numeric(y) 
+
 result <- x + y
 
 ```
@@ -58,7 +72,9 @@ result <- x + y
 <!-- loesung: ende-->
 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+## Aufgabe 3
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{r}
 
@@ -79,7 +95,7 @@ vec[4,2]
 ```{r}
 
 vec <- c(10, 20, 30, 40, 50)
-vec[2] # Ein Vektor ist eindimensional und nicht zweidimensional 
+vec[c(4,2)] 
 
 ```
 </details>

@@ -2,7 +2,9 @@
 # Datentypen
 
 
-Schreibe 74,678 in R.
+## Aufgabe 1
+
+Schreibe $74,678$ in R.
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
@@ -21,12 +23,13 @@ Schreibe 74,678 in R.
 <!-- loesung: ende-->
 
 
-Könnte man auch das Komma als Trennzeichen benutzen? 
+Könnte auch das Komma als Trennzeichen verwendet werden?
 
 <!-- loesung: start-->
 <details>
 
-Nein, R verwendet ausschließlich den Punkt als Trennzeichen und gibt beim Komma eine Fehlermeldung. 
+Nein, R verwendet nur den Punkt als Trennzeichen und gibt bei einem Komma eine Fehlermeldung aus. 
+
 ```{r}
 
 74,678
@@ -36,9 +39,9 @@ Nein, R verwendet ausschließlich den Punkt als Trennzeichen und gibt beim Komma
 <!-- loesung: ende-->
 
 
+## Aufgabe 2
 
-Speichere die Nummer 4560 einmal als Zahl und einmal als Text. Benne das Objekt "nummer". 
-
+Speichere die Nummer $4560$ einmal als Zahl(numeric) und einmal als Text (character). Benenne die Objekte `nummer1` und `nummer2`.
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
@@ -50,15 +53,17 @@ Speichere die Nummer 4560 einmal als Zahl und einmal als Text. Benne das Objekt 
 <details>
 ```{r}
 
-nummer <- 4560
-nummer <- "4560"
+nummer1 <- 4560
+nummer2 <- "4560"
 
 ```
 </details>
 <!-- loesung: ende-->
 
 
-Stell dir vor, du hast einen Hund, der Baloo heißt, 10 Kg wiegt und gern spielt. Du möchtest diese 3 Merkmale in R schreiben und unter verschiedenen Objekten speichern. Wie könntest du das machen? 
+## Aufgabe 3
+
+Stell dir vor, du hast einen Hund, der Baloo heißt, 10 kg wiegt und gerne spielt. Du möchtest diese drei Eigenschaften in R schreiben und unter verschiedenen Objekten speichern. Wie könntest du das machen? 
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
@@ -79,7 +84,30 @@ spiel <- TRUE
 <!-- loesung: ende-->
 
 
-Erstelle einen Faktor "farben" mit drei verschiedenen Farbalternativen: blau, rot und grün. 
+Finde mit Hilfe der Funktion class() heraus, welchen Datentyp Variablen `name` und `spiel` haben. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+<!-- loesung: start-->
+<details>
+```{r}
+
+class(name)  # character
+class(kg)    # numeric
+class(spiel) # logical
+
+```
+</details>
+<!-- loesung: ende-->
+
+
+## Aufgabe 4
+
+Erstelle einen Faktor `farbe`, der drei verschiedene Farbalternativen enthält: blau, rot und grün. 
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
@@ -92,7 +120,7 @@ Erstelle einen Faktor "farben" mit drei verschiedenen Farbalternativen: blau, ro
 <details>
 ```{r}
 
-farben <- factor(levels = c("blau", "rot", "grün"))
+farbe <- factor(levels = c("blau", "rot", "grün"))
 
 ```
 </details>
