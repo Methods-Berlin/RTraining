@@ -10,3 +10,4 @@ dependencies:
   - r-psych
   - r-irkernel
   - r-lavaan
+  - r-ggplot2
