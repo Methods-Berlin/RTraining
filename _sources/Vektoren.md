@@ -21,7 +21,9 @@ kernelspec:
 
 
 
-Erstelle einen Vektor "a" mit den Werten 3, 4, 6, 7, 9, 10. Greife den 3. Wert heraus. 
+## Aufgabe 1
+
+Erstelle einen Vektor `a` mit den Werten $3, 4, 6, 7, 9, 10$. Lass dir den dritten Wert ausgeben. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -44,7 +46,9 @@ a[3]
 <!-- loesung: ende-->
 
 
-Erstelle einen Vektor "b" mit den Werten 4.5, 6.5, 8.5, 5.5, 7.5, 3.5. Greife den 2., 4. und 6. Wert heraus. 
+## Aufgabe 2
+
+Erstelle einen Vektor `b` mit den Werten $4.5, 6.5, 8.5, 5.5, 7.5, 3.5$. Lass dir gleichzeitig den zweiten, vierten und sechsten Wert ausgeben. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -67,7 +71,9 @@ b[c(2,4,6)]
 <!-- loesung: ende-->
 
 
-Erstelle einen Vektor "c" mit den Werten 0, 1, 0, 2, 2. Ändere den 3. Wert zu 1 und den 4. Wert zu NA. 
+## Aufgabe 3
+
+Erstelle einen Vektor `c` mit den Werten $0, 1, 0, 2, 2$. Ändere den dritten Wert in $1$ und den vierten Wert in `NA`. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -91,7 +97,9 @@ c[4] <- NA
 <!-- loesung: ende-->
 
 
-Erstelle einen character Vektor "schüler", der die Namen Luca, Matteo und Emil beinhaltet.
+## Aufgabe 4
+
+Erstelle einen character Vektor `schüler`, der die Namen Luca, Matteo und Emil enthält.
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.

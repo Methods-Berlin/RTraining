@@ -21,7 +21,9 @@ kernelspec:
 
 
 
-Multipliziere $17/4$ und $8$ und speichere es unter Objekt "A". Quadriere das Objekt und ziehe $52$ ab. 
+## Aufgabe 1
+
+Berechne die folgende Gleichung in R:  $(17/4 * 8)^2 - 52$. Speichere das Ergebnis als `A`.
 
 
 ```{code-cell} r
@@ -38,13 +40,16 @@ Multipliziere $17/4$ und $8$ und speichere es unter Objekt "A". Quadriere das Ob
 
 A <- (17/4) * 8
 A^2 - 52
+
 ```
 
 
 <!-- loesung: ende-->
 
 
-Teile $3.5 - 5.67$ durch $76.76 * 7.8$ und multipliziere alles mit $2.3$. Speichere dies unter "B". 
+## Aufgabe 2
+
+Berechne die folgende Gleichung in R: $(3.5 - 5.67) / (76.26 * 7.8) * 2.3$. Speichere das Ergebnis als `B`. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -58,18 +63,21 @@ Teile $3.5 - 5.67$ durch $76.76 * 7.8$ und multipliziere alles mit $2.3$. Speich
 ```{code-cell} r
 :tags: [hide-cell]
 
-B <- ((3.5 - 5.67) / (76.76 * 7.8)) * 2.3
+B <- ((3.5 - 5.67) / (76.26 * 7.8)) * 2.3
+
 ```
 
 
 <!-- loesung: ende-->
 
 
-Berechne $3.3^4$ und speichere dies unter "C". Berechne dann folgendes mit den gespeicherten Objekten: 
+## Aufgabe 3
 
-* A + B + C 
-* A/B + C
-* A * B * C
+Berechne die folgendes in R: $3.3^4$. Speichere das Ergebnis als `C` und berechne die folgenden Gleichungen mit den bisher gespeicherten Objekten: 
+
+* $A + B + C$ 
+* $A/B + C$
+* $A * B * C$
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.

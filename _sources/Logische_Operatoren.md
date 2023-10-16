@@ -21,7 +21,9 @@ kernelspec:
 
 
 
-Erstelle ein Objekt "x" mit dem Wert 5000 und ein Objekt "y" mit dem Wert 8 hoch 4 (d.h. 8^4). Überprüfe, ob "x" großer als "y" ist. 
+## Aufgabe 1
+
+Erstelle ein Objekt `x` mit dem Wert $5000$ und ein Objekt `y` mit dem Wert $8^4$. Prüfe, ob $x > y$. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -45,7 +47,9 @@ x > y
 <!-- loesung: ende-->
 
 
-Erstelle einen Vektor "z" mit den Werten 0.5, 0.75, 0.25, 1, 1.25, 1.5. Überprüfe, welche Werte kleiner oder gleich 1 sind. 
+## Aufgabe 2
+
+Erstelle einen Vektor `z` mit den Werten $0.5, 0.75, 0.25, 1, 1.25, 1.5$. Prüfe, welche Werte kleiner oder gleich eins ($<= 1$) sind. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -68,7 +72,9 @@ z <= 1
 <!-- loesung: ende-->
 
 
-Erstelle einen Vektor "v" mit den Werten 5,3,4,5,5,7,2. Ändere den zweiten Wert auf 5. Speichere alle Werte mit einer 5 aus dem Vektor "v" in einen neuen Vektor "w".
+## Aufgabe 3
+
+Erstelle einen Vektor `v` mit den Werten $5,3,4,5,5,7,2$. Ändere den zweiten Wert in eine $5$. Speichere alle Werte mit einer $5$ aus dem Vektor `v` in einem neuen Vektor `w`.
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.

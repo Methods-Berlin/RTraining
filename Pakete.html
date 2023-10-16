@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Pakete &#8212; RTraining</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -66,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Pipe-Operator" href="Pipe_Operator.html" />
     <link rel="prev" title="Funktionen" href="Funktionen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -75,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -169,7 +180,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Fehler.html">Fehler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Einfuehrung_Statistik.html">Einführung in Statistik</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aufgaben_hinzufuegen.html">Aufgaben hinzufügen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="test_1.html">Testdokument</a></li>
 </ul>
 
     </div>
@@ -391,10 +401,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -402,7 +412,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -449,18 +459,18 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pakete">
-<h1>Pakete<a class="headerlink" href="#pakete" title="Permalink to this headline">#</a></h1>
+<h1>Pakete<a class="headerlink" href="#pakete" title="Permalink to this heading">#</a></h1>
 <p><a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Pakete.Rmd download=Pakete.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a></p>
 <p><a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/Rmd_ohne_Loesungen/Pakete.Rmd download=Pakete.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a></p>
 <section id="einfuhrung">
-<h2>Einführung<a class="headerlink" href="#einfuhrung" title="Permalink to this headline">#</a></h2>
+<h2>Einführung<a class="headerlink" href="#einfuhrung" title="Permalink to this heading">#</a></h2>
 <p>Manche Funktionen, die wir für unsere Analysen nutzen wollen, sind nicht direkt in R verfügbar. Anders als die Funktionen
 aus den Basispaketen, die automatisch in R vorhanden sind, müssen wir diese erst über Pakete verfügbar machen.
 Bevor wir eine solche Funktion das erste Mal nutzen, müssen wir das entsprechende Paket, welches diese Funktion
 enthält, installieren. Wenn du das Paket einmal installiert hast, musst du es beim nächsten mal nur noch laden.</p>
 </section>
 <section id="pakete-installieren">
-<h2>Pakete installieren<a class="headerlink" href="#pakete-installieren" title="Permalink to this headline">#</a></h2>
+<h2>Pakete installieren<a class="headerlink" href="#pakete-installieren" title="Permalink to this heading">#</a></h2>
 <p>Öffne RStudio und installiere das Paketet <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> über die Konsole.</p>
 <!-- loesung: start-->
 <details><summary> <b>Lösung</b> </summary>
@@ -482,7 +492,7 @@ Button mit dem Namen <code class="docutils literal notranslate"><span class="pre
 <!-- loesung: ende-->
 </section>
 <section id="pakete-laden">
-<h2>Pakete laden<a class="headerlink" href="#pakete-laden" title="Permalink to this headline">#</a></h2>
+<h2>Pakete laden<a class="headerlink" href="#pakete-laden" title="Permalink to this heading">#</a></h2>
 <p>Bevor du die Funktionen eines Pakets nutzen kannst, musst du das Paket laden. Dies muss jedes Mal gemacht werden, wenn du
 RStudio neu geöffnet hast. Am besten schreibst du den entsprechenden Befehl an den Anfang des R-Scripts für alle Pakete,
 die in dem Script benötigt werden. Alternativ kannst du den Befehl auch in der Konsole ausführen.</p>
@@ -510,7 +520,7 @@ angezeigt, die du bereits installiert hast. Indem du auf der linken Seite ein H�
 </details>
 <!-- loesung: ende-->
 <section id="maskierung">
-<h3>Maskierung<a class="headerlink" href="#maskierung" title="Permalink to this headline">#</a></h3>
+<h3>Maskierung<a class="headerlink" href="#maskierung" title="Permalink to this heading">#</a></h3>
 <p>Manche Funktionen von verschiedenen Paketen haben den gleichen Namen. Wenn man dann beide Pakete geladen hat, kommt es zu
 Problemen, wenn man versucht die gedoppelte Funktion zu nutzen. Deshalb ist es manchmal hilfreich, eine Funktion zu
 verwenden ohne das ganze Paket zu laden.</p>
@@ -528,7 +538,7 @@ psych::alpha()
 </section>
 </section>
 <section id="pakete-aktualisieren">
-<h2>Pakete aktualisieren<a class="headerlink" href="#pakete-aktualisieren" title="Permalink to this headline">#</a></h2>
+<h2>Pakete aktualisieren<a class="headerlink" href="#pakete-aktualisieren" title="Permalink to this heading">#</a></h2>
 <p>Pakete werden ab und an aktualisiert, deshalb sollten wir hin und wieder prüfen, ob unsere Pakete noch auf dem
 aktuellsten Stand sind. Dafür gibt es wie beim Installieren und Laden wieder mehrere Wege.</p>
 <p>Prüfe über die Konsole, ob die Pakete, die du installiert hast, noch aktuell sind.</p>
@@ -553,7 +563,7 @@ aktualisieren.</p>
 <!-- loesung: ende-->
 </section>
 <section id="pakete-entfernen">
-<h2>Pakete entfernen<a class="headerlink" href="#pakete-entfernen" title="Permalink to this headline">#</a></h2>
+<h2>Pakete entfernen<a class="headerlink" href="#pakete-entfernen" title="Permalink to this heading">#</a></h2>
 <p>Manchmal kann es vorkommen, dass man Probleme mit dem Installieren oder Laden eines Pakets hat. Dann kann es mitunter helfen, das Paket zu deinstallieren.</p>
 <p>Deinstalliere das Paket <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> und installiere es anschließend neu.</p>
 <!-- loesung: start-->
@@ -593,11 +603,10 @@ install.packages("ggplot2")
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Funktionen.html"
@@ -617,10 +626,7 @@ install.packages("ggplot2")
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -690,8 +696,8 @@ By Methods Group Berlin
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

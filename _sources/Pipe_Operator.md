@@ -20,7 +20,10 @@ kernelspec:
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/Rmd_ohne_Loesungen/Pipe_Operator.Rmd download=Pipe_Operator.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
-Schreibe den folgenden Code mithilfe des Pipe-Operators um: 
+
+## Aufgabe 1
+
+Schreibe den folgenden Code mit Hilfe des Pipe-Operators um: 
 
 ```{code-cell} r
 numbers <- c(-1, -2, -3, -4, -5)
@@ -55,8 +58,9 @@ print(numbers_sum)
 <!-- loesung: ende-->
 
 
+## Aufgabe 2
 
-Erstelle mithilfe des Pipe-Operators einen Vektor mit Werten: 1.201, 1.243, 1.264, 1.156; und runde sie auf 2 Nachkommastellen. Speichere das Endprodukt unter "numbers_round".
+Erstelle mit Hilfe des Pipe-Operators einen Vektor mit den Werten $1.201, 1.243, 1.264, 1.156$ und runde diese auf zwei Nachkommastellen. Speichere das Endprodukt unter `numbers_round`.
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -81,8 +85,9 @@ print(numbers_round)
 <!-- loesung: ende-->
 
 
+## Aufgabe 3
 
-Erstelle mithilfe des Pipe-Operators einen Vektor mit Werten 2,3,6,7; berechne den Mittelwert und ziehe die Quadratwurzel aus dem Mittelwert. Speichere das Endprodukt unter "score".
+Erstelle mit Hilfe des Pipe-Operators einen Vektor mit den Werten $2,3,6,7$, berechne den Mittelwert und ziehe die Quadratwurzel aus dem Mittelwert. Speichere das Endprodukt unter `score`.
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.

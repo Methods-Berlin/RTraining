@@ -20,7 +20,10 @@ kernelspec:
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/Rmd_ohne_Loesungen/Matrizen.Rmd download=Matrizen.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
-Erstelle eine Matrix "m_1" mit den Werten 4, 7, 9, 2. Die Matrix soll 2 Zeilen und 2 Spalten enthalten und die Werte sollen zeilenweise eingetragen werden. Greife die 1. Zeile heraus. 
+
+## Aufgabe 1
+
+Erstelle eine Matrix `m_1` mit den Werten $4, 7, 9, 2$. Die Matrix soll zwei Zeilen und zwei Spalten enthalten und die Werte sollen zeilenweise eingetragen werden. Lass dir die Werte erster Zeile ausgeben.
 
 
 ```{code-cell} r
@@ -45,7 +48,9 @@ m_1[1, ]
 <!-- loesung: ende-->
 
 
-Erstelle eine Matrix "m_2" mit den Werten 7, 3, 0, 5, 6. Die Matrix soll 2 Zeilen und 2 Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Greife die 2. Spalte heraus.
+## Aufgabe 2
+
+Erstelle eine Matrix `m_2` mit den Werten $7, 3, 0, 5, 6$. Die Matrix soll zwei Zeilen und zwei Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Lass dir die Werte der zweiten Spalte ausgeben.
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -69,7 +74,9 @@ m_2[ , 2]
 <!-- loesung: ende-->
 
 
-Erstelle eine Matrix "m_3" mit den Werten 6, 1, 1, 9, 11, 15. Die Matrix soll 3 Zeilen und 3 Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Greife den Wert in der 3. Zeile und 2. Spalte heraus.
+## Aufgabe 3
+
+Erstelle eine Matrix `m_3` mit den Werten $6, 1, 1, 9, 11, 15$. Die Matrix soll drei Zeilen und drei Spalten enthalten und die Werte sollen spaltenweise eingetragen werden. Lass dir den Wert der dritten Zeile und zweiten Spalte ausgeben. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.

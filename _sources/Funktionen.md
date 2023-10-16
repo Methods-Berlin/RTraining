@@ -21,7 +21,11 @@ kernelspec:
 
 
 
-Schreibe eine Funktion "multi", die 2 "Zutaten" (x und y) braucht. Diese Funktion multipliziert die beiden Zutaten, speichert das Produkt in einer Variable "p" und gibt es wieder zurück. Wende dann diese Funktion den Werten x = 3 & y = 4 und x = -1 & y = 10 an. 
+## Aufgabe 1
+
+Schreibe eine Funktion `multi`, die zwei "Zutaten" (x und y) benötigt. Diese Funktion multipliziert die beiden Zutaten, 
+speichert das Produkt in einer Variable `p` und gibt es wieder zurück. Wende dann diese Funktion auf die Werte $x = 3,  y = 4$ 
+und $x = -1,  y = 10$ an. 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -49,7 +53,9 @@ multi(x = -1, y = 10)
 <!-- loesung: ende-->
 
 
-Schreibe eine Funktion "quadrat", die eine Zutat braucht und von der die Quadratzahl berechnet wird. Das Ergebnis wird als Variable "t" gespeichert und zurückgegeben. Probiere die Funktion aus! 
+## Aufgabe 2
+
+Schreibe eine Funktion `quadrat`, die eine Zutat benötigt und aus der das Quadrat berechnet wird. Das Ergebnis wird in einer Variable `s` gespeichert und zurückgegeben. Probiere die Funktion aus! 
 
 ```{code-cell} r
 # Hier kannst du deine Lösung ausprobieren.
@@ -64,8 +70,8 @@ Schreibe eine Funktion "quadrat", die eine Zutat braucht und von der die Quadrat
 :tags: [hide-cell]
 
 quadrat <- function(x) {
-  t <- x^2
-  return(t)
+  s <- x^2
+  return(s)
 }
 
 # Funktion ausprobieren
@@ -78,7 +84,9 @@ quadrat(10)
 <!-- loesung: ende-->
 
 
-Schreibe eine Funktion "durchschnitt", die einen Vektor "x" als die Zutat braucht. Diese Funktion soll die Werte dieses Vektors mithilfe der Funktion sum() aufsummieren und durch die Anzahl der Werte bzw. Vektorlänge mithilfe der length() Funktion teilen. Du kannst die Produkte beliebig nennen, wobei das Endprodukt zurückgegeben wird. Probiere die Funktion aus! Fällt dir etwas auf? 
+## Aufgabe 3
+
+Schreibe eine Funktion `durchschnitt`, die einen Vektor `x` als Input benötigt. Diese Funktion soll die Werte dieses Vektors mit der Funktion `sum()` addieren und durch die Anzahl der Werte (Vektorlänge) mit der Funktion `length()` dividieren. Du kannst die Produkte beliebig nennen, wobei das Endprodukt zurückgegeben wird. Probiere die Funktion aus! Fällt dir etwas auf? 
 
 
 ```{code-cell} r

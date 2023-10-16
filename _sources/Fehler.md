@@ -12,6 +12,7 @@ kernelspec:
   name: ir
 ---
 
+
 # Fehler 
 
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/main/Aufgaben_rmd/Fehler.Rmd download=Fehler.Rmd>RMarkdown-Datei mit Lösungen herunterladen</a>
@@ -20,7 +21,10 @@ kernelspec:
 <a href=https://raw.githubusercontent.com/Methods-Berlin/RTraining/Rmd_ohne_Loesung/Rmd_ohne_Loesungen/Fehler.Rmd download=Fehler.Rmd>RMarkdown-Datei ohne Lösungen herunterladen</a>
 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+
+## Aufgabe 1
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{code-cell} r
 library(ggplot)
@@ -49,7 +53,9 @@ library(ggplot2)
 
 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+## Aufgabe 2
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{code-cell} r
 x <- 10
@@ -73,6 +79,10 @@ result <- x + y
 
 x <- 10
 y <- 5  # y wurde als Text gespeichert und Berechnungen können nicht auf Text angewendet werden
+
+# alternativ kann Text (character) auch in eine Zahl (numeric) umgewandelt werden: 
+y <- as.numeric(y) 
+
 result <- x + y
 
 ```
@@ -81,7 +91,9 @@ result <- x + y
 <!-- loesung: ende-->
 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+## Aufgabe 3
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{code-cell} r
 vek <- c(10, 20, 30, 40, 50)
@@ -103,7 +115,7 @@ vec[4,2]
 :tags: [hide-cell]
 
 vec <- c(10, 20, 30, 40, 50)
-vec[2] # Ein Vektor ist eindimensional und nicht zweidimensional 
+vec[c(4,2)] 
 
 ```
 
