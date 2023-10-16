@@ -1,7 +1,15 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 
 # Fehler 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+
+## Aufgabe 1
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{r}
 
@@ -19,7 +27,9 @@ library(ggplot)
 
 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+## Aufgabe 2
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{r}
 
@@ -38,7 +48,9 @@ result <- x + y
 
 
 
-Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code durch. 
+## Aufgabe 3
+
+Welcher Fehler tritt im folgenden Code auf? Korrigiere ihn und führe den Code aus. 
 
 ```{r}
 

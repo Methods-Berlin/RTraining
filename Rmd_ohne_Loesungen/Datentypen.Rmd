@@ -2,7 +2,9 @@
 # Datentypen
 
 
-Schreibe 74,678 in R.
+## Aufgabe 1
+
+Schreibe $74,678$ in R.
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
@@ -12,23 +14,13 @@ Schreibe 74,678 in R.
 
 
 
-Könnte man auch das Komma als Trennzeichen benutzen? 
+Könnte auch das Komma als Trennzeichen verwendet werden?
 
 
 
+## Aufgabe 2
 
-Speichere die Nummer 4560 einmal als Zahl und einmal als Text. Benne das Objekt "nummer". 
-
-
-```{r}
-# Hier kannst du deine Lösung ausprobieren.
-
-
-```
-
-
-
-Stell dir vor, du hast einen Hund, der Baloo heißt, 10 Kg wiegt und gern spielt. Du möchtest diese 3 Merkmale in R schreiben und unter verschiedenen Objekten speichern. Wie könntest du das machen? 
+Speichere die Nummer $4560$ einmal als Zahl(numeric) und einmal als Text (character). Benenne die Objekte `nummer1` und `nummer2`.
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
@@ -38,7 +30,31 @@ Stell dir vor, du hast einen Hund, der Baloo heißt, 10 Kg wiegt und gern spielt
 
 
 
-Erstelle einen Faktor "farben" mit drei verschiedenen Farbalternativen: blau, rot und grün. 
+## Aufgabe 3
+
+Stell dir vor, du hast einen Hund, der Baloo heißt, 10 kg wiegt und gerne spielt. Du möchtest diese drei Eigenschaften in R schreiben und unter verschiedenen Objekten speichern. Wie könntest du das machen? 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+Finde mit Hilfe der Funktion class() heraus, welchen Datentyp Variablen `name` und `spiel` haben. 
+
+```{r}
+# Hier kannst du deine Lösung ausprobieren.
+
+
+```
+
+
+
+## Aufgabe 4
+
+Erstelle einen Faktor `farbe`, der drei verschiedene Farbalternativen enthält: blau, rot und grün. 
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.

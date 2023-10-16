@@ -1,7 +1,10 @@
 
 # Skripte 
 
-Öffne ein neues Skript und führe folgenden Code aus: 
+
+## Aufgabe 1
+
+Öffne ein neues Script und führe den folgenden Code aus: 
 
 ```{r}
 
@@ -11,7 +14,10 @@ xy <- x * y
 
 ```
 
-Beschreibe mit Kommentaren, was der Code in jeder Zeile macht. 
+
+## Aufgabe 2
+
+Beschreibe mit Hilfe von Kommentaren, was der Code in jeder Zeile macht. 
 
 
 ```{r}
@@ -22,5 +28,8 @@ Beschreibe mit Kommentaren, was der Code in jeder Zeile macht.
 
 
 
-Benutze dasselbe Skript, um die Aufgaben zum Thema [R als Taschenrechner] (R_als_Taschenrechner.qmd) zu bearbeiten. Falls du die Aufgaben schon bearbeitet hast, bearbeite dann die Aufgaben zum nächsten Thema aus dem R Crash Course. Benutze dabei die Kommentare mithilfe von "#", um den Code verständlicher zu machen. Wenn du fertig bist, speichere dein Skript. 
+## Aufgabe 3
+
+Benutze dasselbe Script, um die Aufgaben zum Thema [R als Taschenrechner] (R_als_Taschenrechner.Rmd) zu bearbeiten. Wenn du diese Aufgaben bereits bearbeitet hast, dann bearbeite die Aufgaben zum nächsten Thema des R Crash Course. Um den Code verständlicher zu machen, verwende Kommentare mit `#`. Speichere dein Script, wenn du fertig bist. 
+
 

@@ -1,7 +1,9 @@
 
 # Dataframe 
 
-Erstelle eine Matrix "scores" mit den Werten 2, 3, 2, 3, 4, 5, 4, 3, 5, 2, 3, 3 mit 3 Spalten und 4 Zeilen. Die Werten sollen zeilenweise eingetragen werden. Wandle die Matrix dann in ein Dataframe "data". Bennene die Spalten: "Item 1", "Item 2", "Item 3". Greife die Werte der 1. Spalte ("Item 1") heraus. 
+## Aufgabe 1
+
+Erstelle eine Matrix `scores` mit den Werten $2, 3, 2, 3, 4, 5, 4, 3, 5, 2, 3, 3$ mit drei Spalten und vier Zeilen. Die Werte sollen zeilenweise eingetragen werden. Dann wandle die Matrix in einen Dataframe `data` um. Benenne die Spalten: `Item 1`, `Item 2`, `Item 3`. Lass dir die Werte der ersten Spalte (`Item 1`) ausgeben. 
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
@@ -11,7 +13,9 @@ Erstelle eine Matrix "scores" mit den Werten 2, 3, 2, 3, 4, 5, 4, 3, 5, 2, 3, 3 
 
 
 
-Nehme in den bestehenden Datensatz eine weitere Variable "Consent" mit auf, die beinhaltet, ob die Teilnehmer*innen ihre Einwilligung für die Studienteilnahme gegeben haben. Alle außer der letzten Person haben ihre Einwilligung gegeben. Mache dies mithilfe logischer Werte (Booleans).
+## Aufgabe 2
+
+Nehme in den bestehenden Datensatz eine weitere Variable `consent` mit auf, die beinhaltet, ob die Teilnehmer*innen ihre Einwilligung für die Studienteilnahme gegeben haben. Bis auf die letzte Person haben alle ihre Einwilligung gegeben. Verwende dazu logische Werte (TRUE oder FALSE).
 
 
 ```{r}
@@ -22,7 +26,9 @@ Nehme in den bestehenden Datensatz eine weitere Variable "Consent" mit auf, die 
 
 
 
-Du führst eine Studie zur Persönlichkeit durch und möchtest bei 4 Personen Extraversion und Verträglichkeit mithilfe eines Fragebogens erfassen. Schließlich bekommst du die Mittelwerte der jeweiligen Skala für jeden Teilnehmer. Die Mittelwerte für Extraversion für die 4 Teilnehmer sind: 3.0, 2.5, 3.0, 3.5 und die Mittelwerte der Verträglichkeit sind: 4.0, 3.5, 4.5, 3.0. Erstelle einen Datensatz "Persönlichkeit" mit 3 Spalten: "Teilnehmer", "E" (Extraversion) und "V" (Verträglichkeit). Greife den Wert für Verträglichkeit des 2. Teilnehmers heraus.    
+## Aufgabe 3
+
+Du führst eine Persönlichkeitsstudie durch und möchtest mit Hilfe eines Fragebogens die Extraversion und Verträglichkeit von vier Personen erfassen. Am Ende erhältst du für jeden Teilnehmer die Mittelwerte der jeweiligen Skala. Die Mittelwerte für Extraversion der vier Personen sind $3.0, 2.5, 3.0, 3.5$ und die Mittelwerte für Verträglichkeit sind: $4.0, 3.5, 4.5, 3.0$. Erstelle einen Datensatz `Persönlichkeit` mit drei Spalten: `Teilnehmer`, `E` (Extraversion) und `V` (Verträglichkeit). Lass dir den Wert für Verträglichkeit des zweiten Teilnehmers ausgeben.  
 
 ```{r}
 # Hier kannst du deine Lösung ausprobieren.
